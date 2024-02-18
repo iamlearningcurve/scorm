@@ -1,0 +1,250 @@
+.expanded-portion {
+    border-top: 1px solid #dfe7ef;
+    padding: 8px 4px;
+    line-break: auto;
+  }
+
+  .custom-white-space {
+    white-space: pre;
+  }
+
+  .custom-img-position {
+    bottom: 0;
+  }
+
+  small{
+    white-space: nowrap;
+    left: 0;
+    // position: absolute;
+    bottom: -15px;
+    font-size: x-small;
+    color: #AC2317;
+    &.last{
+      bottom: 90px;
+    }
+  }
+
+
+.bg-green {
+    background-color: #00392a !important;
+}
+
+.responsive {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+
+  .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.txt-yellow {
+    color: rgb(56,84,154) !important;
+}
+
+.txt-green {
+    color: rgb(64,117,124) !important;
+}
+
+.bg-green {
+    background-color: rgb(64,117,124) !important;
+}
+
+.bg-yellow {
+    background-color: rgb(56,84,154) !important;
+}
+
+:host ::ng-deep .p-tag.p-tag-success {
+    background-color: #F0F5FF !important;
+    color: black
+}
+
+.custom-header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--eduact-black2-rgb), 0.8);
+}
+
+.custom-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.custom-animation-2 {
+    visibility: visible;
+    animation-delay: 400ms;
+    animation: spin 14s ease infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+
+@keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.background-tint { position: relative; }
+
+.background-tint::after {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* Tint color */
+  background-color: rgba(0,0,0,.8);
+  margin: auto;
+}
+
+.home__blob {
+    fill: #00392a;
+  }
+  .home__blob-img {
+    width: 360px;
+  }
+
+  .home__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 260px;
+  }
+
+  .cont-box {
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    border-radius: 12px;
+    background: #F0F5FF;
+  }
+
+  .sq-btn {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 7px;
+    background: #F0F5FF;
+  }

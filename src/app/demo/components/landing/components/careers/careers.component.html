@@ -1,0 +1,342 @@
+
+<!-- <div id="hero" class="background-tint flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" style="background-image: url('../../../../../../assets/demo/images/landing/contact-us-banner.png');background-size: cover;
+background-repeat: no-repeat; min-height: 20vh;">
+</div> -->
+<!-- <div class="grid surface-section text-800">
+    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center " >
+        <section>
+            <span class="block text-6xl font-bold mb-1 txt-green">Your Future Begins Here</span>
+            <div class="text-5xl text-blue-700 font-bold mb-3 txt-yellow">Join Our E-Learning Revolution!</div>
+            <p class="mt-0 mb-4 text-xl line-height-3 text-justify">We believe in the power of talent and innovation to drive success. We're constantly on the lookout for passionate individuals who are eager to make a difference and join us on our journey of growth and excellence.</p>
+            
+            <button pButton pRipple label="Find Your Next Career" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2" (click)="router.navigate(['/landing'], {fragment: 'open-positions'})"></button>
+        </section>
+    </div>
+    <div class="col-12 md:col-6 overflow-hidden">
+        <img src="../../../../../../assets/demo/images/landing/careers.jpeg" alt="product" class="border-round w-full">
+    </div>
+</div> -->
+
+<div class="bg-gray-900 p-8 flex justify-content-center md:justify-content-start bg-no-repeat bg-cover md:bg-contain" style="background-image: url('../../../../../../assets/demo/images/landing/cta-3.jpg');">
+    <div class="px-5">
+        <div class="text-white font-bold text-6xl">Join Us Now</div>
+        <div class="text-blue-200 font-bold text-5xl">Exciting Opportunities Await! </div>
+        <div class="mt-3 mb-5 text-gray-200 font-medium line-height-3"> Explore our open positions and take the next step in your career journey with us. </div>
+        <button pbutton="" pripple="" label="Get Started" class="p-element p-ripple font-bold px-5 py-3 p-button p-component bg-yellow" (click)="router.navigate(['/landing'], {fragment: 'open-positions'})">
+            <span class="p-button-label">See Open Positions</span>
+            <span class="p-ink"></span>
+        </button>
+    </div>
+</div>
+
+<!-- <div class="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" id="open-positions">
+
+    <div class="surface-section">
+        <div class="flex md:align-items-center md:justify-content-between flex-column md:flex-row pb-4 surface-border">
+            <div class="mb-3 lg:mb-0">
+                <div class="text-900 font-bold text-3xl mb-2">Open Positions</div>
+                <div class="text-500 mr-0 md:mr-3">Exciting Opportunities Await! Explore our open positions and take the next step in your career journey with us.</div>
+            </div>
+           
+            <div class="flex flex-row gap-4">
+                <p-dropdown appendTo="body" [disabled]="products.length === 0" [options]="categoryList" [(ngModel)]="category" optionLabel="name" optionValue="value" placeholder="All Category" (onChange)="filterByCategory(dv)"></p-dropdown>
+                <a pripple="" tabindex="0" class="p-ripple p-element cursor-pointer flex align-items-center lg:mt-0 text-900" (click)="clearFilter(dv)">Clear All<span class="p-ink" style="height: 60px; width: 60px; top: -20.5703px; left: -4.86719px;"></span></a>
+            </div>
+        </div>
+        
+    </div>
+    <p-dataView #dv [value]="products" [rows]="5" [paginator]="true" filterBy="position, fullTime">
+        
+        <ng-template let-products pTemplate="list">
+            <div class="grid grid-nogutter">
+                <div class="col-12" *ngFor="let item of products; let first = first">
+                    <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                        <div class="cont-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                                <path d="M18.4414 25.1582C20.1673 25.1582 21.5664 23.7591 21.5664 22.0332C21.5664 20.3073 20.1673 18.9082 18.4414 18.9082C16.7155 18.9082 15.3164 20.3073 15.3164 22.0332C15.3164 23.7591 16.7155 25.1582 18.4414 25.1582Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.31641 35.1585L16.2308 24.2427" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.31641 35.1587L27.1048 31.5273C27.3212 31.4912 27.5242 31.3989 27.6936 31.2595C27.863 31.1201 27.9927 30.9386 28.0697 30.7332L31.5664 21.4087L19.0664 8.90869L9.7419 12.4054C9.53651 12.4824 9.35501 12.6121 9.21562 12.7815C9.07623 12.9509 8.98387 13.1539 8.94781 13.3703L5.31641 35.1587Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" fill="#2F55A0"/>
+                                <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                            <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                                <div class="text-2xl font-bold text-900">{{ item.position }}</div>
+                                <span class="flex align-items-center gap-2">
+                                    <i class="pi pi-calendar"></i>
+                                    <span class="font-semibold">Posted on: {{ item.posted }}</span>
+                                </span>
+                                <div class="flex align-items-center gap-3">
+                                    <p-tag [value]="item.fullTime ? 'Full Time': 'Part Time'" severity="success"></p-tag>
+                                    <p-tag *ngIf="item.workFromHome" value="Work From Home" severity="success"></p-tag>
+                                </div>
+                            </div>
+                            <div class="flex align-items-center justify-content-center sm:flex-column align-items-center sm:gap-3 sm:gap-2">
+                                
+                                <button pButton pRipple label="Apply Now" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2" (click)="setPosition(item.position)"></button>        
+                                <a class="cursor-pointer text-blue-600" (click)="item.collapse = !item.collapse">{{item.collapse ? 'Show Less': 'Show More'}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="item.collapse" class="expanded-portion">
+                        
+                        <div class="grid">
+                            <div class="col-12 lg:col-2">
+                                <div class="flex flex-row lg:flex-column lg:border-right-1 surface-border gap-5 mb-4 lg:px-5">
+                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                        <span class="font-semibold mr-3">71</span>
+                                        <i class="pi pi-bookmark"></i>
+                                    </div>
+                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                       
+                                    </div>
+                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 lg:col lg:px-5">
+                                <div class="flex flex-wrap align-items-center justify-content-between mb-5 gap-5">
+                                    <div class="flex flex-row">
+                                        <span *ngIf="!item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Part Time</span>
+                                        <span *ngIf="item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Full Time</span>
+                                        <span *ngIf="item.workFromHome" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 border-round">Work From Home</span>
+                                    </div>
+                                    <div class="flex align-items-center gap-4">
+                                        <i class="pi pi-envelope cursor-pointer"></i>        
+                                        <i class="pi pi-link cursor-pointer"></i>
+                                    </div>
+                                </div>
+                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Description:</div>
+                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.description}} </div>
+                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Qualification:</div>
+                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.qualification}}</div>
+                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Benefits:</div>
+                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.benefits}}</div>
+                                <div class="flex flex-wrap justify-content-between align-items-center gap-3 bg-yellow text-primary-700 p-3 border-round">
+                                    <span class="font-medium text-lg text-white">{{item.position}}</span>
+                                    <div class="flex align-items-center cursor-pointer">
+                                        <span class="font-bold mr-3 text-white">Apply Now</span>
+                                        <i class="pi pi-arrow-right text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 lg:col-3 lg:border-left-1 surface-border">
+                                <div class="p-3">
+                                    
+                                    <span class="text-900 font-medium text-xl block mb-5">Similar Positions</span>
+                                    
+                                    <div class="flex flex-column gap-3">
+                                        <div class="w-full h-full p-5 border-round" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%), url('assets/images/blocks/content/content-8.png');">
+                                            <span class="text-white font-medium mb-3">Senior Manager</span>
+                                            <span class="text-white-alpha-70 block line-height-3">Posted on: 1st Jan, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </ng-template>
+    </p-dataView>
+</div> -->
+<div class="surface-section-1 py-6 text-center">
+    <div class="grid text-800  lg:px-8">
+        <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+            <section>
+                <div class="mb-3 font-bold text-4xl">
+                    <span class="text-900">See Why Our Team Loves it Here</span>
+                </div>
+                <div class="text-600 text-xl mt-3 mb-5 line-height-3 custom-blue-color text-justify">
+                    “We believe in building teams wherein unique perspectives and talents can thrive, and everyone can have what they need to excel in their role, career, and at home.”
+                </div>
+                <div class="flex flex-row gap-2">
+                    <div class="sq-btn cursor-pointer" (click)="changeTestimonialReverse()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                            <path d="M27.3066 16.3495H5.30664" stroke="#2F55A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.3066 7.34949L5.30664 16.3495L14.3066 25.3495" stroke="#2F55A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="sq-btn cursor-pointer" (click)="changeTestimonialForward()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                            <path d="M17.5995 26.0566C17.412 25.869 17.3067 25.6147 17.3067 25.3495C17.3067 25.0843 17.412 24.83 17.5995 24.6424L24.8925 17.3495H5.30664C5.04142 17.3495 4.78707 17.2442 4.59953 17.0566C4.412 16.8691 4.30664 16.6147 4.30664 16.3495C4.30664 16.0843 4.412 15.8299 4.59953 15.6424C4.78707 15.4549 5.04142 15.3495 5.30664 15.3495H24.8925L17.5995 8.0566C17.5066 7.96374 17.433 7.85349 17.3827 7.73216C17.3325 7.61083 17.3066 7.48079 17.3066 7.34947C17.3066 7.21814 17.3325 7.0881 17.3828 6.96678C17.433 6.84545 17.5067 6.73521 17.5995 6.64236C17.6924 6.5495 17.8027 6.47584 17.924 6.42559C18.0453 6.37534 18.1754 6.34948 18.3067 6.34949C18.438 6.34949 18.568 6.37537 18.6894 6.42563C18.8107 6.47589 18.9209 6.54955 19.0138 6.64242L28.0138 15.6424C28.0171 15.6457 28.0197 15.6493 28.0229 15.6526C28.0427 15.6728 28.0619 15.6936 28.0798 15.7155C28.0899 15.7277 28.0986 15.7406 28.108 15.7532C28.1181 15.7667 28.1287 15.7801 28.1381 15.7942C28.1479 15.8087 28.1563 15.8238 28.1652 15.8388C28.173 15.8518 28.1812 15.8646 28.1884 15.8781C28.1965 15.8931 28.2033 15.9086 28.2105 15.9239C28.2173 15.9382 28.2244 15.9522 28.2305 15.9668C28.2366 15.9816 28.2415 15.9967 28.2469 16.0117C28.2526 16.0275 28.2586 16.0431 28.2635 16.0592C28.268 16.0742 28.2713 16.0894 28.2752 16.1045C28.2793 16.121 28.2839 16.1374 28.2873 16.1541C28.2907 16.1716 28.2928 16.1892 28.2953 16.2067C28.2974 16.2215 28.3002 16.2359 28.3017 16.2508C28.3049 16.2837 28.3066 16.3166 28.3066 16.3495C28.3066 16.3825 28.3049 16.4154 28.3017 16.4482C28.3002 16.4631 28.2974 16.4776 28.2953 16.4923C28.2928 16.5098 28.2907 16.5274 28.2873 16.5449C28.2839 16.5617 28.2793 16.578 28.2752 16.5945C28.2713 16.6096 28.268 16.6248 28.2635 16.6398C28.2586 16.6559 28.2526 16.6715 28.2469 16.6873C28.2415 16.7023 28.2366 16.7174 28.2305 16.7322C28.2244 16.7468 28.2173 16.7608 28.2105 16.7751C28.2033 16.7904 28.1965 16.8059 28.1884 16.8209C28.1812 16.8344 28.173 16.8472 28.1652 16.8603C28.1563 16.8752 28.1479 16.8903 28.1381 16.9049C28.1287 16.919 28.1181 16.9323 28.108 16.9458C28.0986 16.9584 28.0899 16.9713 28.0798 16.9835C28.0616 17.0058 28.0421 17.027 28.0219 17.0476C28.0191 17.0505 28.0167 17.0537 28.0138 17.0566L19.0138 26.0566C18.9209 26.1495 18.8107 26.2231 18.6894 26.2734C18.568 26.3237 18.438 26.3495 18.3066 26.3495C18.1753 26.3495 18.0453 26.3237 17.9239 26.2734C17.8026 26.2231 17.6924 26.1495 17.5995 26.0566Z" fill="#2F55A0"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-12 md:col-6 overflow-hidden">
+            <div class="surface-card shadow-2 p-4 flex flex-column align-items-center md:flex-row md:align-items-stretch h-full" style="border-radius: 10px; border: 16px solid #F7FAFF;;">
+                <span>
+                    <p-avatar size="xlarge" icon="pi pi-user" shape="circle"></p-avatar>
+                    <!-- <div class="flex flex-row justify-content-between flex-wrap">
+                        <span>Google Reviews</span>
+                        <p-rating [(ngModel)]="testimonial[count].rating" [cancel]="false"></p-rating>
+                    </div> -->
+                   
+                    </span>
+                    <div class="flex flex-column align-items-start md:align-items-start ml-4 mt-4 md:mt-0">
+                        <p class="mt-0 mb-3 text-600 text-xl line-height-3 text-center md:text-left">
+                            {{testimonial[count].content}}
+                        </p>    
+                        <p-rating [(ngModel)]="testimonial[count].rating" [readonly]="true" [cancel]="false" ></p-rating>
+                        <span class="text-900 font-medium mb-1 mt-auto">{{testimonial[count].name}}</span>
+                        <div class="text-600 text-sm">Google Reviews</div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+</div>
+<div class="surface-section px-4 md:px-6 lg:px-8" id="open-positions">    
+    <div class="col-12">
+        <div class="surface-section">
+            <div class="flex pl-4 md:align-items-center md:justify-content-between flex-column md:flex-row pb-4 surface-border">
+                <div class="mb-3 lg:mb-0">
+                    <div class="text-900 font-bold text-3xl mb-2">Open Positions</div>
+                    <div class="text-500 mr-0 md:mr-3">Exciting Opportunities Await! Explore our open positions and take the next step in your career journey with us.</div>
+                </div>
+               
+                <div class="flex flex-row gap-4">
+                    <p-dropdown appendTo="body" [disabled]="products.length === 0" [options]="categoryList" [(ngModel)]="category" optionLabel="name" optionValue="value" placeholder="All Category" (onChange)="filterByCategory(dv)"></p-dropdown>
+                    <a pripple="" tabindex="0" class="p-ripple p-element cursor-pointer flex align-items-center lg:mt-0 text-900" (click)="clearFilter(dv)">Clear All<span class="p-ink" style="height: 60px; width: 60px; top: -20.5703px; left: -4.86719px;"></span></a>
+                </div>
+            </div>
+            
+        </div>
+        <p-dataView #dv [value]="products" [rows]="5" [paginator]="true" filterBy="position, fullTime">
+        
+            <ng-template let-products pTemplate="list">
+                <div class="grid grid-nogutter">
+                    <div class="col-12" *ngFor="let item of products; let first = first">
+                        <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                            <div class="cont-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                                    <path d="M18.4414 25.1582C20.1673 25.1582 21.5664 23.7591 21.5664 22.0332C21.5664 20.3073 20.1673 18.9082 18.4414 18.9082C16.7155 18.9082 15.3164 20.3073 15.3164 22.0332C15.3164 23.7591 16.7155 25.1582 18.4414 25.1582Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.31641 35.1585L16.2308 24.2427" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.31641 35.1587L27.1048 31.5273C27.3212 31.4912 27.5242 31.3989 27.6936 31.2595C27.863 31.1201 27.9927 30.9386 28.0697 30.7332L31.5664 21.4087L19.0664 8.90869L9.7419 12.4054C9.53651 12.4824 9.35501 12.6121 9.21562 12.7815C9.07623 12.9509 8.98387 13.1539 8.94781 13.3703L5.31641 35.1587Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" fill="#2F55A0"/>
+                                    <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                                <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                                    <div class="text-2xl font-bold text-900">{{ item.position }}</div>
+                                    <span class="flex align-items-center gap-2">
+                                        <i class="pi pi-calendar"></i>
+                                        <span class="font-semibold">Posted on: {{ item.posted }}</span>
+                                    </span>
+                                    <div class="flex align-items-center gap-3">
+                                        <p-tag [value]="item.fullTime ? 'Full Time': 'Part Time'" severity="success"></p-tag>
+                                        <p-tag *ngIf="item.workFromHome" value="Work From Home" severity="success"></p-tag>
+                                    </div>
+                                </div>
+                                <div class="flex align-items-center justify-content-center sm:flex-column align-items-center sm:gap-3 sm:gap-2">
+                                    
+                                    <button pButton pRipple label="Apply Now" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2" (click)="setPosition(item.position)"></button>        
+                                    <a class="cursor-pointer text-blue-600" (click)="item.collapse = !item.collapse">{{item.collapse ? 'Show Less': 'Show More'}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="item.collapse" class="expanded-portion">
+                            
+                            <div class="grid">
+                                <div class="col-12 lg:col-2">
+                                    <div class="flex flex-row lg:flex-column lg:border-right-1 surface-border gap-5 mb-4 lg:px-5">
+                                        <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                            <!-- <span class="font-semibold mr-3">71</span>
+                                            <i class="pi pi-bookmark"></i> -->
+                                        </div>
+                                        <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                           
+                                        </div>
+                                        <div class="text-900 flex flex-row align-items-center justify-content-end">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 lg:col lg:px-5">
+                                    <div class="flex flex-wrap align-items-center justify-content-between mb-5 gap-5">
+                                        <div class="flex flex-row">
+                                            <span *ngIf="!item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Part Time</span>
+                                            <span *ngIf="item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Full Time</span>
+                                            <span *ngIf="item.workFromHome" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 border-round">Work From Home</span>
+                                        </div>
+                                        <div class="flex align-items-center gap-4">
+                                            <i class="pi pi-envelope cursor-pointer"></i>        
+                                            <i class="pi pi-link cursor-pointer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="line-height-3 text-lg text-900 mb-4 font-bold">Description:</div>
+                                    <div class="line-height-3 text-lg text-900 mb-4"> {{item.description}} </div>
+                                    <div class="line-height-3 text-lg text-900 mb-4 font-bold">Qualification:</div>
+                                    <div class="line-height-3 text-lg text-900 mb-4"> {{item.qualification}}</div>
+                                    <div class="line-height-3 text-lg text-900 mb-4 font-bold">Benefits:</div>
+                                    <div class="line-height-3 text-lg text-900 mb-4"> {{item.benefits}}</div>
+                                    <div class="flex flex-wrap justify-content-between align-items-center gap-3 bg-yellow text-primary-700 p-3 border-round">
+                                        <span class="font-medium text-lg text-white">{{item.position}}</span>
+                                        <div class="flex align-items-center cursor-pointer" (click)="setPosition(item.position)">
+                                            <span class="font-bold mr-3 text-white">Apply Now</span>
+                                            <i class="pi pi-arrow-right text-white"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 lg:col-3 lg:border-left-1 surface-border">
+                                    <div class="p-3">
+                                        
+                                        <span class="text-900 font-medium text-xl block mb-5">Positions Details</span>
+                                        
+                                        <div class="flex flex-column gap-3">
+                                            <div class="w-full h-full p-5 border-round" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%), url('assets/images/blocks/content/content-8.png');">
+                                                <!-- <span class="text-white font-medium mb-3"></span> -->
+                                                <span class="text-white-alpha-70 block line-height-3">Posted on: {{item.posted}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </ng-template>
+        </p-dataView>
+    </div>
+</div>
+<p-dialog header="Apply Now" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visible = false">
+    <form *ngIf="applyForm" [formGroup]="applyForm" (ngSubmit)="submitForm()">
+        <div class="p-fluid formgrid grid px-4 py-8 md:px-6 lg:px-8">
+            <div class="field col-12 mb-4">
+                <input type="text" pInputText placeholder="Position" [formControl]="position" disabled/>
+            </div>
+            <div class="field col-12 lg:col-6 mb-4">
+                <input type="text" pInputText placeholder="First Name" [formControl]="firstName"/>
+                <small *ngIf="applyForm.controls.firstName.status === 'INVALID' && applyForm.controls.firstName.dirty">First Name Required</small>
+            </div>
+            <div class="field col-12 lg:col-6 mb-4">
+                <input type="text" pInputText placeholder="Last Name" [formControl]="lastName"/>
+                <small *ngIf="applyForm.controls.lastName.status === 'INVALID' && applyForm.controls.lastName.dirty">Last Name Required</small>
+            </div>
+            <div class="field col-12 mb-4">
+                <input type="text" pInputText placeholder="Email" [formControl]="email"/>
+                <small *ngIf="applyForm.controls.email.status === 'INVALID' && applyForm.controls.email.dirty">Please enter valid email</small>
+            </div>
+            <div class="field col-12 mb-4">
+                <p-inputMask mask="9999999999" placeholder="Phone Number" [formControl]="phoneNumber"></p-inputMask>
+                <small *ngIf="applyForm.controls.phoneNumber.status === 'INVALID' && applyForm.controls.phoneNumber.dirty">Phone Number Required</small>
+            </div>
+            <div class="field col-12 mb-4">
+                <input pInputText type="file" id="updf" name="updf" accept="application/pdf" [formControl]="file"/>
+            </div>
+            <div class="col-12 text-right">
+                <button pButton pRipple label="Submit" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="submitForm()"></button>
+            </div>
+        </div>
+    </form>
+    
+</p-dialog>

@@ -1,0 +1,144 @@
+<!-- <div id="hero" class="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" 
+            style="background-image: url('../../../../../../assets/demo/images/landing/banner-bg-1.png');background-size: cover;background-color: #00392a;
+    background-repeat: no-repeat;">
+           <div class="grid grid-nogutter text-800 justify-content-between">
+            <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+                <section>
+                    <span class="block text-8xl font-bold mb-1 text-white">Our Creative Expression To Realism</span>
+                    
+                    <p class="mt-0 mb-4 text-xl line-height-3" style="color: #d98205;">Unlocking the Art of Realism: Where Imagination Meets Precision in Every Stroke.</p>
+                    
+                    <button pButton pRipple label="Explore" type="button" class="mr-3 p-button-raised cursor-pointer z-2" style="background-color: #D98205; color: white !important" (click)="router.navigate(['/landing'], {fragment: 'portfolio'})"></button>
+                </section>
+            </div>
+            <div class="col-12 md:col-6 overflow-hidden flex justify-content-center">
+                <img class="responsive" src="../../../../../../assets/demo/images/landing/img3.webp" alt="Profibild" />
+            </div>
+        </div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+   </div> -->
+<div class="grid grid-nogutter justify-content-center">
+    <div class="surface-section-1 grid-nogutter">
+        <div class="px-4 py-8 md:px-6 lg:px-8">
+            <div class="flex flex-wrap">
+                <div class="w-full xl:w-6 p-3 pr-5">
+                    <div class="font-bold text-900 text-6xl mb-4 custom-header-text">Our Creative Expression to Realism</div>
+                    <p class="mt-0 mb-4 text-700 line-height-3 text-xl text-justify">From creativity to precision, our development journey merges imagination with meticulous detail, crafting compelling narratives for diverse audiences.</p>
+                    <p class="mt-0 mb-4 text-700 line-height-3 text-xl text-justify">What we deliver</p>
+                    <div class="flex flex-wrap gap-2 align-items-center mb-4">
+                        <p-chip label="Interactive Learning Models" icon="pi pi-tablet" styleClass="bg-green"></p-chip>
+                        <p-chip label="Classroom Trainings" icon="pi pi-book"></p-chip>
+                        <p-chip label="Simulations" icon="pi pi-qrcode"></p-chip>
+                        <p-chip label="Virtual Reality Solutions" icon="pi pi-video"></p-chip>
+                        <p-chip label="Assessments & Questionnaire" icon="pi pi-file-o"></p-chip>
+                        <p-chip label="Online Help" icon="pi pi-question-circle"></p-chip><br/>
+                    </div>
+                   
+                    <button pButton pRipple label="Explore More" type="button" class="mr-3 p-button-raised cursor-pointer z-2 txt-yellow-border" style="background-color: rgb(56,84,154); color: white !important" (click)="router.navigate(['/landing'], {fragment: 'portfolio'})"></button>
+                </div>
+                <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-blue-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px;">
+                    <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.12);">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NKEFWyqJ5XA?si=TO4-YwDY_p_8dTOy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute top-0 left-0 w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="surface-section px-4 md:px-6 lg:px-8" id="portfolio">    
+            <div class="col-12">
+                <div class="flex flex-column md:flex-row justify-content-between align-items-center mb-4">
+                    <div class="flex flex-column text-center md:text-left">
+                        <span class="text-900 font-bold text-3xl">Portfolio</span>
+                        <span class="text-500 mr-0 md:mr-3">Creativity Unleashed, Mastery Displayed.</span>
+                    </div>
+                    <span class="p-input-icon-left w-full md:w-auto">
+                        <i class="pi pi-search"></i>
+                        <input type="text" pinputtext="" placeholder="Search" class="p-inputtext p-component p-element w-full md:w-auto">
+                    </span>
+                </div>
+                <p-tabView>
+                    <p-tabPanel header="Content Development">
+                        <div class="surface-ground">
+                            <div class="grid grid-nogutter -mt-3 -ml-3 -mr-3">
+                                <div class="col-12 lg:col-6 p-3">
+                                    <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../../../../assets/demo/images/landing/5.jpeg); min-height: 50rem;">
+                                        <div class="p-4 align-self-start">
+                                            <div class="text-white text-2xl font-bold mb-2">Category Title</div>
+                                            <span class="text-white text-lg line-height-3">Quis varius quam quisque id diam. A pellentesque sit amet porttitor eget. Vitae purus faucibus ornare suspendisse sed nisi lacus.</span>
+                                        </div>
+                                        <div class="p-4 align-self-end">
+                                            <a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
+                                                <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 lg:col-6">
+                                    <div class="grid grid-nogutter lg:flex-column">
+                                        <div class="col-12 p-3">
+                                            <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../../../../assets/demo/images/landing/1.png);">
+                                                <div class="p-4 align-self-start">
+                                                    <div class="text-white text-2xl font-bold mb-2">Category Title</div>
+                                                    <span class="text-white text-lg line-height-3">Quis varius quam quisque id diam</span>
+                                                </div>
+                                                <div class="p-4 align-self-end">
+                                                    <a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
+                                                        <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 p-3">
+                                            <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../../../../assets/demo/images/landing/3.png);">
+                                                <div class="p-4 align-self-start">
+                                                    <div class="text-white text-2xl font-bold mb-2">Category Title</div>
+                                                    <span class="text-white text-lg line-height-3">Vitae purus faucibus ornare</span>
+                                                </div>
+                                                <div class="p-4 align-self-end">
+                                                    <a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
+                                                        <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="E-Learning">
+                       <div class="surface-ground"><div class="grid grid-nogutter -mt-3 -ml-3 -mr-3"><div class="col-12 lg:col-6 p-3"><div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/images/blocks/ecommerce/categorypreview/category-preview-1-9.png); min-height: 50rem;"><div class="p-4 align-self-start"><div class="text-white text-2xl font-bold mb-2">Category Title</div><span class="text-white text-lg line-height-3">Quis varius quam quisque id diam. A pellentesque sit amet porttitor eget. Vitae purus faucibus ornare suspendisse sed nisi lacus.</span></div><div class="p-4 align-self-end"><a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample<i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i></a></div></div></div><div class="col-12 lg:col-6"><div class="grid grid-nogutter lg:flex-column"><div class="col-12 p-3"><div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/images/blocks/ecommerce/categorypreview/category-preview-1-10.png);"><div class="p-4 align-self-start"><div class="text-white text-2xl font-bold mb-2">Category Title</div><span class="text-white text-lg line-height-3">Quis varius quam quisque id diam</span></div><div class="p-4 align-self-end"><a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample<i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i></a></div></div></div><div class="col-12 p-3"><div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/images/blocks/ecommerce/categorypreview/category-preview-1-11.png);"><div class="p-4 align-self-start"><div class="text-white text-2xl font-bold mb-2">Category Title</div><span class="text-white text-lg line-height-3">Vitae purus faucibus ornare</span></div><div class="p-4 align-self-end"><a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample<i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i></a></div></div></div></div></div></div></div>
+                    </p-tabPanel>
+                    <p-tabPanel header="K12 & Grad Courses">
+                       
+                    </p-tabPanel>
+                    <p-tabPanel header="Graphic Development">
+                       
+                    </p-tabPanel>
+                    <p-tabPanel header="Hosting Services">
+                       
+                    </p-tabPanel>
+                </p-tabView>
+           
+        </div>
+        
+    </div>
+    
+</div>
+   

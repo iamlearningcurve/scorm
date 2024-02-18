@@ -1,0 +1,32 @@
+textarea {
+    resize: none;
+  }
+
+  small{
+    white-space: nowrap;
+    left: 0;
+    // position: absolute;
+    bottom: -15px;
+    font-size: x-small;
+    color: #AC2317;
+    &.last{
+      bottom: 90px;
+    }
+  }
+
+  .background-tint { position: relative; }
+
+.background-tint::after {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* Tint color */
+  background-color: rgba(0,0,0,.8);
+  margin: auto;
+  // filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}
