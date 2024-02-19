@@ -4,40 +4,40 @@
             <a class="flex align-items-center" href="javascript:void(0);" (click)="switchPages('home')">
                 <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
             </a>
-            <a pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
+            <a #menu pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
                 <i class="pi pi-bars text-4xl"></i>
             </a>
             <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
-                        <a (click)="switchPages('home')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
+                        <a (click)="switchPages('home'); menu.click()" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
                            <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="switchPages('teams')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
+                        <a (click)="switchPages('teams'); menu.click()" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
                             <span>About</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="switchPages('portfolio')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
+                        <a (click)="switchPages('portfolio'); menu.click()" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
                             <span>Portfolio</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="switchPages('careers')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
+                        <a (click)="switchPages('careers'); menu.click()" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
                             <span>Careers</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="switchPages('services')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
+                        <a (click)="switchPages('services'); menu.click()" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
                             <span>Services</span>
                         </a>
                     </li>
                 </ul>
                 <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                    <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin()"></button>
-                    <button pButton pRipple label="Contact Us" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="switchPages('contact')"></button>
+                    <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin(); menu.click()"></button>
+                    <button pButton pRipple label="Contact Us" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="switchPages('contact'); menu.click()"></button>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
         <app-teams *ngIf="teams"></app-teams>      
         <app-portfolio *ngIf="portfolio"></app-portfolio>
         <app-careers *ngIf="careers"></app-careers>
-        <app-services *ngIf="services"></app-services>
+        <app-services *ngIf="services" (submitOutput)="switchPages('contact')"></app-services>
         <app-contact *ngIf="contact"></app-contact>
         <!-- <div class="py-4 px-4 mx-0 mt-8 lg:mx-8">
             <div class="grid justify-content-between">

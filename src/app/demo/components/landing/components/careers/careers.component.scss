@@ -107,6 +107,10 @@
     color: black
 }
 
+.custom-zoom {
+    zoom: 75%;
+}
+
 .custom-header {
     background-repeat: no-repeat;
     background-size: cover;
@@ -238,6 +242,27 @@
     align-items: flex-start;
     border-radius: 12px;
     background: #F0F5FF;
+    width: 80px;
+  }
+
+  .custom-btn-hidden {
+    width: 73px;
+    height: 73px;
+    background: transparent !important;
+  }
+
+  .custom-pic {
+    width: 12px;
+    height: 12px;
+    border-radius: 500px;
+    background: var(--Primary-100, #CEE0FA);
+  }
+
+  .custom-pic-center {
+    width: 32px;
+    height: 12px;
+    border-radius: 500px;
+    background: #2F55A0;
   }
 
   .sq-btn {

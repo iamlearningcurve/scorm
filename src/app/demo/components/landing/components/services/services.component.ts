@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,5 +8,6 @@ import { Router } from '@angular/router';
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent {
+  @Output() submitOutput = new EventEmitter();
   constructor(public router: Router) { }
 }
