@@ -1,14 +1,13 @@
 <div class="surface-0 flex justify-content-center">
     <div id="home" class="landing-wrapper overflow-hidden">
-        <!-- Add mb-3 at the end -->
         <div class="mt-2 py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
             <a class="flex align-items-center" href="javascript:void(0);" (click)="switchPages('home')">
                 <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
             </a>
-            <a pRipple class="cursor-pointer block lg:hidden text-700 z-2" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
+            <a pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
                 <i class="pi pi-bars text-4xl"></i>
             </a>
-            <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:106px">
+            <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
                         <a (click)="switchPages('home')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3" style="color: #42526B !important;">
