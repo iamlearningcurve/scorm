@@ -1,7 +1,7 @@
 <div class="surface-section px-4 py-8 md:px-6 lg:px-8 background-tint" style="background-image: url('assets/demo/images/landing/contact-us-banner.png'); background-size: cover;">
     <div class="flex flex-column lg:flex-row align-items-center justify-content-between">
         <div class="text-center lg:text-left lg:pr-8 z-2">
-            <div class="text-blue-200 font-medium mb-1 text-xl z-2">TAKE THE NEXT STEP</div>
+            <div class="text-blue-200 font-medium mb-1 text-xl z-2">Take the Next Step</div>
             <div class="text-900 font-bold text-5xl mb-5 text-white">Secure your 15-minute consultation with us today!</div>
             <button pButton pRipple label="Get Started" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="router.navigate(['/landing'], {fragment: 'contact-form'})"></button>
         </div>
@@ -101,8 +101,7 @@
                 </div>
                
                 <div class="col-12">
-                    <!-- <button pButton pRipple label="Submit" type="submit" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="submitForm()"></button> -->
-                    <button pbutton="" pripple="" [disabled]="!enquireForm.dirty || enquireForm.status === 'INVALID'" label="Send Message" icon="pi pi-send" class="p-element p-ripple w-auto p-button p-component" style="background-color: rgb(56,84,154) !important; color: white !important" (click)="submitForm()">
+                    <button pbutton="" pripple="" [disabled]="!enquireForm.dirty || enquireForm.status === 'INVALID' || disableForm" label="Send Message" icon="pi pi-send" class="p-element p-ripple w-auto p-button p-component" style="background-color: rgb(56,84,154) !important; color: white !important">
                         <span class="p-button-icon p-button-icon-left pi pi-send" aria-hidden="true"></span>
                         <span class="p-button-label">Send Message</span>
                         <span class="p-ink"></span>
@@ -111,6 +110,7 @@
             </div>
         </form>
     </div>
+    <p-toast position="bottom-center"></p-toast>
     <div class="col-12 md:col-6 bg-no-repeat bg-right-bottom" style="background-image: url('assets/demo/images/landing/contact-1.png');">
         <div class="text-900 text-2xl font-medium mb-4">Contact Us</div>
         <div class="text-700 line-height-3 mb-4">Our experts have the skills and experience to help you succeed. We have worked with diverse clients, ranging from Fortune 500 companies to small businesses. This makes us confident to help you achieve your project goals. </div>

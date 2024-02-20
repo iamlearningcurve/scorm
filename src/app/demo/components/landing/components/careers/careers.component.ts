@@ -9,19 +9,19 @@ import { Router } from '@angular/router';
   styleUrl: './careers.component.scss'
 })
 export class CareersComponent {
-  desc1 = `\tServes as subject matter expert, possessing in-depth knowledge of Biometric Processing.\n
-  \tParticipates as needed in all phases of software development with emphasis on the planning, analysis, testing, integration, documentation, and presentation phases. \n
-  \tDirects and controls activities for a client, having overall responsibility for financial management , methods, and staffing to ensure that technical requirements are met. \n
-  \tInteractions involve client negotiations and interfacing with senior management. \n
-  \tDecision-making and domain knowledge may have a critical impact on overall project implementation. \n
-  \tMay supervise others. \n
-  \tProvides technical/management leadership on major tasks or technology assignments. Establishes goals and plans that meet project objectives . `
-  qual1 = `\tMaster’s Degree in a related field – Science, CS, Biometric Systems\n
-  \t10 years of related experience\n
-  \tHas Biometric Processing domain and expert technical knowledge. `
-  benefits1 = `\tFlexible Work Hours \n
-  \tPart Time \n
-  \tWork From Home`;
+  desc1 = `\u2022 Serves as subject matter expert, possessing in-depth knowledge of Biometric Processing.\n
+  \u2022 Participates as needed in all phases of software development with emphasis on the planning, analysis, testing, integration, documentation, and presentation phases. \n
+  \u2022 Directs and controls activities for a client, having overall responsibility for financial management , methods, and staffing to ensure that technical requirements are met. \n
+  \u2022 Interactions involve client negotiations and interfacing with senior management. \n
+  \u2022 Decision-making and domain knowledge may have a critical impact on overall project implementation. \n
+  \u2022 May supervise others. \n
+  \u2022 Provides technical/management leadership on major tasks or technology assignments. Establishes goals and plans that meet project objectives . `
+  qual1 = `\u2022 Master’s Degree in a related field – Science, CS, Biometric Systems\n
+  \u2022 10 years of related experience\n
+  \u2022 Has Biometric Processing domain and expert technical knowledge. `
+  benefits1 = `\u2022 Flexible Work Hours \n
+  \u2022 Part Time \n
+  \u2022 Work From Home`;
   email!: FormControl;
   firstName!: FormControl;
   lastName!: FormControl;
@@ -140,4 +140,14 @@ export class CareersComponent {
   submitForm() {
     console.log(this.applyForm)
   }
+
+  constructEmail(item: any) {
+    let mailToLink = "mailto:''?subject=Job Description - " + encodeURIComponent(item.position) + "body=Check Out the careers page in Learning Curve Technologies at www.learningcurvetechnologies.com for more information.";
+    window.location.href = mailToLink;
+  }
+
+  copyLink(item: any) {
+    let customText = 'Position: ' + item.position + ' Description: ' + item.description;
+    navigator.clipboard.writeText(customText);
+  } 
 }

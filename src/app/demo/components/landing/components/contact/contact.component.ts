@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { CustomerService } from 'src/app/demo/service/customer.service';
 
 @Component({
   selector: 'app-contact',
   standalone: false,
+  providers: [MessageService],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -15,8 +18,8 @@ export class ContactComponent {
   message!: FormControl;
   phoneNumber!: FormControl;
   enquireForm!: FormGroup;
-
-  constructor(public router: Router) { 
+  disableForm = false;
+  constructor(public router: Router, private customerService: CustomerService, private messageService: MessageService) { 
 
   }
   ngOnInit(): void {
@@ -40,6 +43,26 @@ export class ContactComponent {
   }
 
   submitForm() {
-    
+    this.disableForm = true;
+    const data = {
+      email: this.enquireForm.controls['email'].value ,
+      message:this.enquireForm.controls['message'].value,
+      lastName: this.enquireForm.controls['lastName'].value,
+      firstName:this.enquireForm.controls['firstName'].value,
+      phoneNumber:this.enquireForm.controls['phoneNumber'].value
+    }
+    this.customerService.postCustomer(data)
+    .then(() => {
+      this.clearForm();
+      this.messageService.add({ severity: 'info', summary: 'Success', detail: 'Details Recorded Successfully', life: 3000 });
+    }).catch(() => {
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Unable to record details at the moment. Please try later.', life: 3000 });
+    }).finally(() => {
+      this.disableForm = false;
+    })
+  }
+
+  clearForm() {
+    this.enquireForm.reset();
   }
 }

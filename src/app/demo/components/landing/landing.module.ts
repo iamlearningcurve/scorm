@@ -33,6 +33,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { RatingModule } from 'primeng/rating';
 import { AvatarModule } from 'primeng/avatar';
 import { ContactComponent } from './components/contact/contact.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
     imports: [
@@ -61,7 +62,8 @@ import { ContactComponent } from './components/contact/contact.component';
         ChipModule,
         FileUploadModule,
         RatingModule,
-        AvatarModule
+        AvatarModule,
+        ToastModule
     ],
     declarations: [
         LandingComponent, 

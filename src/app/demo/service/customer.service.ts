@@ -1,30 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Customer } from '../api/customer';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class CustomerService {
-
+    baseUrl = 'https://api.apispreadsheets.com/data/uCRRdnkv1ct5Re8i/'
     constructor(private http: HttpClient) { }
 
-    getCustomersSmall() {
-        return this.http.get<any>('assets/demo/data/customers-small.json')
-            .toPromise()
-            .then(res => res.data as Customer[])
-            .then(data => data);
-    }
-
-    getCustomersMedium() {
-        return this.http.get<any>('assets/demo/data/customers-medium.json')
-            .toPromise()
-            .then(res => res.data as Customer[])
-            .then(data => data);
-    }
-
-    getCustomersLarge() {
-        return this.http.get<any>('assets/demo/data/customers-large.json')
-            .toPromise()
-            .then(res => res.data as Customer[])
-            .then(data => data);
+    postCustomer(data: any) {
+        return lastValueFrom(this.http.post<any>(`${this.baseUrl}`, data));
     }
 }
