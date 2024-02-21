@@ -13,6 +13,10 @@
     border-radius: 50%;
   }
 
+  :host ::ng-deep p-tabview .p-tabview .p-tabview-panels {
+    display: none;
+  }
+
 .txt-yellow {
     color: rgb(56,84,154) !important;
 }

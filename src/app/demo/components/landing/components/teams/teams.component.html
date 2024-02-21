@@ -92,7 +92,7 @@
                             
                             <div class="flex flex-column align-items-start gap-2" style="width: 220px;">
                                 <span class="box-text">Core Values</span>
-                                <span class="box-sub-text-2 text-left">We strongly believe in and practice DO-RITE.</span>
+                                <span class="box-sub-text-2 text-left">We strongly believe in and practice <span class="cursor-pointer text-blue-600" (click)="doRightPopup = true;">DO-RITE</span>.</span>
                             </div>    
                         </div>
                     </div>
@@ -129,7 +129,11 @@
     </div>
 </div>
 
-
+<p-dialog header="Do-Rite" [(visible)]="doRightPopup" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="doRightPopup = false">
+    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+        <img src="assets/demo/images/landing/do-right.png" alt="do-right" class="w-6" />
+    </div>
+</p-dialog>
 <!-- <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
     <div class="text-center bg-no-repeat bg-cover border-round px-6 py-8" style="background: url('../../../../../../assets/demo/images/landing/overlapping-cards.jpg');">
         <div class="text-white text-6xl font-semibold mb-3">Our 
@@ -355,11 +359,11 @@
     <div class="grid grid-nogutter align-items-center">
         <div class="col-12">
             <div class="grid mt-4">
-                <article class="col-12 md:col-6 lg:col-3 mb-5 lg:mb-0">
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
                     <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-11.png');">
                         <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
-                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Ravi Kumar</h3>
-                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">CO Founder & CEO</p>
+                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Ravi Kumar Konakere</h3>
+                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">Co-Founder & CEO</p>
                             <div class="flex gap-4 w-full mt-3">
                                 <i class="pi pi-linkedin cursor-pointer"></i>  
                                 <i class="pi pi-twitter cursor-pointer"></i>                           
@@ -367,7 +371,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="col-12 md:col-6 lg:col-3 mb-5 lg:mb-0">
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
                     <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-10.png');">
                         <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
                             <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Archana K</h3>
@@ -379,24 +383,48 @@
                         </div>
                     </div>
                 </article>
-                <article class="col-12 md:col-6 lg:col-3 mb-5 lg:mb-0">
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
                     <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-10.png');">
                         <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
-                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Sowmya Arun</h3>
-                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">Sr. Project Manager</p><div class="flex gap-4 w-full mt-3">
+                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Dipali Gandhi</h3>
+                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">E-Learning & ILT</p><div class="flex gap-4 w-full mt-3">
                                 <i class="pi pi-linkedin cursor-pointer"></i>
                                 <i class="pi pi-twitter cursor-pointer"></i>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="col-12 md:col-6 lg:col-3 mb-5 lg:mb-0">
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
                     <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-10.png');">
                         <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
-                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Misha Sardana</h3>
-                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">HR Support</p>
+                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Sowmya A</h3>
+                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">K-12, Grad & Post Grad Content</p>
                             <div class="flex gap-4 w-full mt-3">
-                                <i class="pi pi-github cursor-pointer"></i>
+                                <i class="pi pi-linkedin cursor-pointer"></i>
+                                <i class="pi pi-twitter cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
+                    <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-10.png');">
+                        <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
+                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Misha S</h3>
+                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">Human Resource</p>
+                            <div class="flex gap-4 w-full mt-3">
+                                <i class="pi pi-linkedin cursor-pointer"></i>
+                                <i class="pi pi-twitter cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-12 md:col-6 lg:col-4 mb-5 lg:mb-0">
+                    <div class="mb-3 relative h-25rem border-round bg-cover bg-no-repeat" style="background-image: url('assets/demo/images/landing/team-10.png');">
+                        <div class="border-round p-3 absolute text-white inline-flex flex-column justify-content-center font-semibold" style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(6px);">
+                            <h3 class="font-light text-xl xl:text-2xl mb-2 mt-0 text-white">Pankaja</h3>
+                            <p class="font-normal text-sm xl:text-base mb-0 mt-0 text-white-alpha-70">Senior Project Manager</p>
+                            <div class="flex gap-4 w-full mt-3">
+                                <i class="pi pi-linkedin cursor-pointer"></i>
                                 <i class="pi pi-twitter cursor-pointer"></i>
                             </div>
                         </div>

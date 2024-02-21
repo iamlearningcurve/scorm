@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './teams.component.scss'
 })
 export class TeamsComponent {
+  doRightPopup = false;
   constructor(public router: Router) { }
   navToLinkedIn(key: number) {
     let link: string
