@@ -107,6 +107,16 @@
     left: 15px;
 }
 
+.gradient-color {
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #EEEFAF, #2F55A0);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
 .custom-blue-color {
     color: var(--Gray-900, #061C3D);
 }
