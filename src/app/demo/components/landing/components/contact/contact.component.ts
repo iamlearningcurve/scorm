@@ -62,6 +62,15 @@ export class ContactComponent {
     })
   }
 
+  scrollToAnchor(location: string, wait: number): void {
+    const element = document.querySelector('#' + location)
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'})
+      }, wait)
+    }
+  }
+
   clearForm() {
     this.enquireForm.reset();
   }

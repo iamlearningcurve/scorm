@@ -146,6 +146,15 @@ export class CareersComponent {
     window.location.href = mailToLink;
   }
 
+  scrollToAnchor(location: string, wait: number): void {
+    const element = document.querySelector('#' + location)
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'})
+      }, wait)
+    }
+  }
+
   copyLink(item: any) {
     let customText = 'Position: ' + item.position + ' Description: ' + item.description;
     navigator.clipboard.writeText(customText);
