@@ -1,46 +1,49 @@
 <div class="surface-0 flex justify-content-center">
     <div id="home" class="landing-wrapper overflow-hidden">
-        <div class="mt-2 py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
-            <a class="flex align-items-center" href="javascript:void(0);" (click)="switchPages('home')">
-                <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
-            </a>
-            <a #menu pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
-                <i class="pi pi-bars text-4xl"></i>
-            </a>
-            <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
-                <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
-                    <li>
-                        <a (click)="switchPages('home'); menu.click()" pRipple [class]="home ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                           <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="switchPages('teams'); menu.click()" pRipple [class]="teams ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                            <span>About</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="switchPages('portfolio'); menu.click()" pRipple [class]="portfolio ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="switchPages('careers'); menu.click()" pRipple [class]="careers ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                            <span>Careers</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="switchPages('services'); menu.click()" pRipple [class]="services ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                            <span>Services</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                    <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin(); menu.click()"></button>
-                    <button pButton pRipple label="Contact Us" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="switchPages('contact'); menu.click()"></button>
+        <div class="fixed w-full top-0 z-3" style="background-color: white;">
+            <div class="mt-2 py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
+                <a class="flex align-items-center" href="javascript:void(0);" (click)="switchPages('home')">
+                    <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
+                </a>
+                <a #menu pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
+                    <i class="pi pi-bars text-4xl"></i>
+                </a>
+                <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
+                    <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
+                        <li>
+                            <a (click)="switchPages('home'); menu.click()" pRipple [class]="home ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                               <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="switchPages('teams'); menu.click()" pRipple [class]="teams ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="switchPages('portfolio'); menu.click()" pRipple [class]="portfolio ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>Portfolio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="switchPages('careers'); menu.click()" pRipple [class]="careers ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>Careers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="switchPages('services'); menu.click()" pRipple [class]="services ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
+                        <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin(); menu.click()"></button>
+                        <button pButton pRipple label="Contact Us" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="switchPages('contact'); menu.click()"></button>
+                    </div>
                 </div>
             </div>
         </div>
+        <br/><br/><br/><br/><br/><br/>
     
         <app-home *ngIf="home" (submitOutput)="switchPages('contact')"></app-home>  
         <app-teams *ngIf="teams"></app-teams>      
@@ -48,49 +51,7 @@
         <app-careers *ngIf="careers"></app-careers>
         <app-services *ngIf="services" (submitOutput)="switchPages('contact')"></app-services>
         <app-contact *ngIf="contact"></app-contact>
-        <!-- <div class="py-4 px-4 mx-0 mt-8 lg:mx-8">
-            <div class="grid justify-content-between">
-                <div class="col-12 md:col-2" style="margin-top:-1.5rem;">
-                    <a (click)="router.navigate(['/pages/landing'], {fragment: 'home'})" class="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
-                        <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="footer sections" height="50" class="mt-2 mr-2">
-                    </a>
-                    <span class="text-900 line-height-1">We love working with ambitious people. Let's build something great together now.</span>
-                </div>
-    
-                <div class="col-12 md:col-10 lg:col-7">
-                    <div class="grid text-center md:text-left">
-                        <div class="col-12 md:col-3">
-                            <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">Company</h4>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">About Us</a>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Careers</a>
-                            <a class="line-height-3 text-xl block cursor-pointer text-700">FAQ</a>
-                        </div>
-                        
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">Resources</h4>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Get Started</a>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Learn</a>
-                            <a class="line-height-3 text-xl block cursor-pointer text-700">Case Studies</a>
-                        </div>
-        
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">Community</h4>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Discord</a>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Events<img src="assets/demo/images/landing/new-badge.svg" class="ml-2"/></a>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">FAQ</a>
-                            <a class="line-height-3 text-xl block cursor-pointer text-700">Blog</a>
-                        </div>
-        
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">Legal</h4>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Brand Policy</a>
-                            <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Privacy Policy</a>
-                            <a class="line-height-3 text-xl block cursor-pointer text-700">Terms of Service</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+       
         <div class="block-content">
             <div class="ng-star-inserted">
                 <div class="grid grid-nogutter surface-section px-4 py-4 md:px-6 lg:px-8 border-top-1 surface-border" style="background-image: url('assets/demo/images/landing/footer-bg-1.png');background-color: #eeeeee !important;">
@@ -175,24 +136,7 @@
     </div>
 </div>
 <p-dialog header="Frequently Asked Questions" [(visible)]="visibleFaq" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleFaq = false;">
-    <!-- <p-accordion>
-        <p-accordionTab header="How much do you charge for your services?">
-            <p>
-                Contact us to know what we charge, but before that, do glance the section on Our Customer Engagement Model to get an overview.
-            </p>
-        </p-accordionTab>
-        <p-accordionTab header="How long does it take to complete a project?">
-            <p>
-                It depends on the complexity of the project, number of revisions, and client response time. We are committed to work on the project diligently and complete it as quickly as possible!
-            </p>
-        </p-accordionTab>
-        <p-accordionTab header="How do you ensure the quality of the project?">
-            <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-                qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
-            </p>
-        </p-accordionTab>
-    </p-accordion> -->
+    
     <div class="surface-section px-4 py-6 md:px-6">
         <div class="grid">
             <div class="col-12 text-900 md:col-6 font-medium text-lg line-height-3">How much do you charge for your services?</div>

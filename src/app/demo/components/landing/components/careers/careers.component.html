@@ -1,21 +1,4 @@
 
-<!-- <div id="hero" class="background-tint flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" style="background-image: url('../../../../../../assets/demo/images/landing/contact-us-banner.png');background-size: cover;
-background-repeat: no-repeat; min-height: 20vh;">
-</div> -->
-<!-- <div class="grid surface-section text-800">
-    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center " >
-        <section>
-            <span class="block text-6xl font-bold mb-1 txt-green">Your Future Begins Here</span>
-            <div class="text-5xl text-blue-700 font-bold mb-3 txt-yellow">Join Our E-Learning Revolution!</div>
-            <p class="mt-0 mb-4 text-xl line-height-3 text-justify">We believe in the power of talent and innovation to drive success. We're constantly on the lookout for passionate individuals who are eager to make a difference and join us on our journey of growth and excellence.</p>
-            
-            <button pButton pRipple label="Find Your Next Career" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2" (click)="router.navigate(['/landing'], {fragment: 'open-positions'})"></button>
-        </section>
-    </div>
-    <div class="col-12 md:col-6 overflow-hidden">
-        <img src="../../../../../../assets/demo/images/landing/careers.jpeg" alt="product" class="border-round w-full">
-    </div>
-</div> -->
 
 <div class="bg-gray-900 p-8 flex justify-content-center md:justify-content-start bg-no-repeat bg-cover" style="background-image: url('assets/demo/images/landing/banner-careers1.jpg');">
     <div class="px-5">
@@ -29,121 +12,7 @@ background-repeat: no-repeat; min-height: 20vh;">
     </div>
 </div>
 
-<!-- <div class="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" id="open-positions">
 
-    <div class="surface-section">
-        <div class="flex md:align-items-center md:justify-content-between flex-column md:flex-row pb-4 surface-border">
-            <div class="mb-3 lg:mb-0">
-                <div class="text-900 font-bold text-3xl mb-2">Open Positions</div>
-                <div class="text-500 mr-0 md:mr-3">Exciting Opportunities Await! Explore our open positions and take the next step in your career journey with us.</div>
-            </div>
-           
-            <div class="flex flex-row gap-4">
-                <p-dropdown appendTo="body" [disabled]="products.length === 0" [options]="categoryList" [(ngModel)]="category" optionLabel="name" optionValue="value" placeholder="All Category" (onChange)="filterByCategory(dv)"></p-dropdown>
-                <a pripple="" tabindex="0" class="p-ripple p-element cursor-pointer flex align-items-center lg:mt-0 text-900" (click)="clearFilter(dv)">Clear All<span class="p-ink" style="height: 60px; width: 60px; top: -20.5703px; left: -4.86719px;"></span></a>
-            </div>
-        </div>
-        
-    </div>
-    <p-dataView #dv [value]="products" [rows]="5" [paginator]="true" filterBy="position, fullTime">
-        
-        <ng-template let-products pTemplate="list">
-            <div class="grid grid-nogutter">
-                <div class="col-12" *ngFor="let item of products; let first = first">
-                    <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4" [ngClass]="{ 'border-top-1 surface-border': !first }">
-                        <div class="cont-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
-                                <path d="M18.4414 25.1582C20.1673 25.1582 21.5664 23.7591 21.5664 22.0332C21.5664 20.3073 20.1673 18.9082 18.4414 18.9082C16.7155 18.9082 15.3164 20.3073 15.3164 22.0332C15.3164 23.7591 16.7155 25.1582 18.4414 25.1582Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M5.31641 35.1585L16.2308 24.2427" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M5.31641 35.1587L27.1048 31.5273C27.3212 31.4912 27.5242 31.3989 27.6936 31.2595C27.863 31.1201 27.9927 30.9386 28.0697 30.7332L31.5664 21.4087L19.0664 8.90869L9.7419 12.4054C9.53651 12.4824 9.35501 12.6121 9.21562 12.7815C9.07623 12.9509 8.98387 13.1539 8.94781 13.3703L5.31641 35.1587Z" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" fill="#2F55A0"/>
-                                <path d="M31.5664 21.409L35.6825 17.2929C35.7986 17.1768 35.8907 17.039 35.9535 16.8873C36.0163 16.7357 36.0486 16.5731 36.0486 16.409C36.0486 16.2448 36.0163 16.0823 35.9535 15.9306C35.8907 15.779 35.7986 15.6412 35.6825 15.5251L24.9503 4.79287C24.7159 4.55845 24.3979 4.42676 24.0664 4.42676C23.7349 4.42676 23.4169 4.55845 23.1825 4.79287L19.0664 8.90899" stroke="#2F55A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
-                            <div class="flex flex-column align-items-center sm:align-items-start gap-3">
-                                <div class="text-2xl font-bold text-900">{{ item.position }}</div>
-                                <span class="flex align-items-center gap-2">
-                                    <i class="pi pi-calendar"></i>
-                                    <span class="font-semibold">Posted on: {{ item.posted }}</span>
-                                </span>
-                                <div class="flex align-items-center gap-3">
-                                    <p-tag [value]="item.fullTime ? 'Full Time': 'Part Time'" severity="success"></p-tag>
-                                    <p-tag *ngIf="item.workFromHome" value="Work From Home" severity="success"></p-tag>
-                                </div>
-                            </div>
-                            <div class="flex align-items-center justify-content-center sm:flex-column align-items-center sm:gap-3 sm:gap-2">
-                                
-                                <button pButton pRipple label="Apply Now" style="background-color: rgb(56,84,154); color: white !important" class="p-button-text p-button border-none font-light line-height-2" (click)="setPosition(item.position)"></button>        
-                                <a class="cursor-pointer text-blue-600" (click)="item.collapse = !item.collapse">{{item.collapse ? 'Show Less': 'Show More'}}</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="item.collapse" class="expanded-portion">
-                        
-                        <div class="grid">
-                            <div class="col-12 lg:col-2">
-                                <div class="flex flex-row lg:flex-column lg:border-right-1 surface-border gap-5 mb-4 lg:px-5">
-                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
-                                        <span class="font-semibold mr-3">71</span>
-                                        <i class="pi pi-bookmark"></i>
-                                    </div>
-                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
-                                       
-                                    </div>
-                                    <div class="text-900 flex flex-row align-items-center justify-content-end">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 lg:col lg:px-5">
-                                <div class="flex flex-wrap align-items-center justify-content-between mb-5 gap-5">
-                                    <div class="flex flex-row">
-                                        <span *ngIf="!item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Part Time</span>
-                                        <span *ngIf="item.fullTime" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 mr-2 border-round">Full Time</span>
-                                        <span *ngIf="item.workFromHome" class="text-900 surface-100 inline-flex font-semibold py-2 px-3 border-round">Work From Home</span>
-                                    </div>
-                                    <div class="flex align-items-center gap-4">
-                                        <i class="pi pi-envelope cursor-pointer"></i>        
-                                        <i class="pi pi-link cursor-pointer"></i>
-                                    </div>
-                                </div>
-                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Description:</div>
-                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.description}} </div>
-                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Qualification:</div>
-                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.qualification}}</div>
-                                <div class="line-height-3 text-lg text-900 mb-4 font-bold">Benefits:</div>
-                                <div class="line-height-3 text-lg text-900 mb-4"> {{item.benefits}}</div>
-                                <div class="flex flex-wrap justify-content-between align-items-center gap-3 bg-yellow text-primary-700 p-3 border-round">
-                                    <span class="font-medium text-lg text-white">{{item.position}}</span>
-                                    <div class="flex align-items-center cursor-pointer">
-                                        <span class="font-bold mr-3 text-white">Apply Now</span>
-                                        <i class="pi pi-arrow-right text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 lg:col-3 lg:border-left-1 surface-border">
-                                <div class="p-3">
-                                    
-                                    <span class="text-900 font-medium text-xl block mb-5">Similar Positions</span>
-                                    
-                                    <div class="flex flex-column gap-3">
-                                        <div class="w-full h-full p-5 border-round" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%), url('assets/images/blocks/content/content-8.png');">
-                                            <span class="text-white font-medium mb-3">Senior Manager</span>
-                                            <span class="text-white-alpha-70 block line-height-3">Posted on: 1st Jan, 2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </ng-template>
-    </p-dataView>
-</div> -->
 <div class="surface-section-1 py-6 text-center">
     <div class="grid text-800  lg:px-8">
         <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
@@ -173,10 +42,7 @@ background-repeat: no-repeat; min-height: 20vh;">
             <div class="surface-card shadow-2 p-4 flex flex-column align-items-center md:flex-row md:align-items-stretch h-full" style="border-radius: 10px; border: 16px solid #F7FAFF;;">
                 <span>
                     <p-avatar size="xlarge" icon="pi pi-user" shape="circle"></p-avatar>
-                    <!-- <div class="flex flex-row justify-content-between flex-wrap">
-                        <span>Google Reviews</span>
-                        <p-rating [(ngModel)]="testimonial[count].rating" [cancel]="false"></p-rating>
-                    </div> -->
+                   
                    
                     </span>
                     <div class="flex flex-column align-items-start justify-content-between w-full md:align-items-start ml-4 mt-4 md:mt-0">

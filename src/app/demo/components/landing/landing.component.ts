@@ -36,6 +36,7 @@ export class LandingComponent {
                 this.careers = false;
                 this.services = false;
                 this.contact = false;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case 'portfolio':
                 this.home = false;
@@ -44,6 +45,7 @@ export class LandingComponent {
                 this.careers = false;
                 this.services = false;
                 this.contact = false;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case 'teams':
                 this.home = false;
@@ -52,6 +54,7 @@ export class LandingComponent {
                 this.careers = false;
                 this.services = false;
                 this.contact = false;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case 'careers':
                 this.home = false;
@@ -60,6 +63,7 @@ export class LandingComponent {
                 this.careers = true;
                 this.services = false;
                 this.contact = false;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case 'services':
                 this.home = false;
@@ -68,6 +72,7 @@ export class LandingComponent {
                 this.careers = false;
                 this.services = true;
                 this.contact = false;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case 'contact':
                 this.home = false;
@@ -76,6 +81,7 @@ export class LandingComponent {
                 this.careers = false;
                 this.services = false;
                 this.contact = true;
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             default:
                 break;
