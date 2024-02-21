@@ -10,4 +10,13 @@ import { Router } from '@angular/router';
 export class ServicesComponent {
   @Output() submitOutput = new EventEmitter();
   constructor(public router: Router) { }
+
+  scrollToAnchor(location: string, wait: number): void {
+    const element = document.querySelector('#' + location)
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'})
+      }, wait)
+    }
+  }
 }
