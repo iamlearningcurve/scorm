@@ -125,7 +125,8 @@
 
 .small-box {
     border-radius: 8px;
-    background: var(--Primary-50, #F0F5FF);
+    // background: var(--Primary-50, #F0F5FF);
+    background: rgba(200, 223, 220, 0.46);
     display: flex;
     padding: 16px;
     align-items: flex-start;

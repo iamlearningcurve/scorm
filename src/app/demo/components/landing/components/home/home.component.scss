@@ -72,6 +72,10 @@
     color: rgb(56,84,154) !important;
 }
 
+:host ::ng-deep .txt-yellow-1 {
+    color: #15836F !important
+}
+
 .surface-section-1 {
     background: #F7FAFF;
 }
@@ -102,9 +106,21 @@
     padding: 10px;
     align-items: flex-start;
     border-radius: 12px;
-    background: #2F55A0;
+    // background: #2F55A0;
+    color: #15836F;
+    background: rgba(200, 223, 220, 0.46);
     top: -30px;
     left: 15px;
+}
+
+.circle-bg {
+    // background-color: #2F55A0;
+    background: rgba(200, 223, 220, 0.46);
+    border-radius: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .gradient-color {

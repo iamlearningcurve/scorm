@@ -77,6 +77,8 @@ export class CareersComponent {
     
   ];
   visible = false;
+  visiblePosition = false;
+  currentItem: any;
   uploadedFiles: any[] = [];
   constructor(public router: Router) {}
 
