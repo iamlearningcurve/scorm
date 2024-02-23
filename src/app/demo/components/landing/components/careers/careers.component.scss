@@ -111,6 +111,11 @@
     zoom: 75%;
 }
 
+.cs-size {
+  font-size: 8px !important;
+  margin-top: 5px;
+}
+
 .custom-header {
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,7 +217,11 @@
   }
 
   :host ::ng-deep .p-dataview .p-dataview-content {
-    border: 1px solid #dfe7ef;
+    border: 1px solid gray;
+  }
+
+  :host ::ng-deep .surface-border-1 {
+    border-color: gray;
   }
 
   :host ::ng-deep .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {

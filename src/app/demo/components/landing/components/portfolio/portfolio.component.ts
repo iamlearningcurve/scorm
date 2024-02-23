@@ -14,7 +14,7 @@ export class PortfolioComponent {
     {name: 'ILT', value: 1},
     {name: 'Graduate Content(UG and PG)', value: 2},
     {name: 'K12', value: 3},
-    {name: 'Other content dev and multimedia', value: 4}
+    {name: 'Other Content Dev and mMltimedia', value: 4}
   ]
   actualVideo = false;
   cancelPause = false;
