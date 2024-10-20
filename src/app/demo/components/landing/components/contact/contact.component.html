@@ -2,14 +2,20 @@
     <div class="flex flex-column lg:flex-row align-items-center justify-content-between">
         <div class="text-center lg:text-left lg:pr-8 z-2">
             <div class="text-blue-200 font-medium mb-1 text-xl z-2">Take the Next Step</div>
-            <div class="text-900 font-bold text-5xl mb-5 text-white">Secure your 15-minute consultation with us today!</div>
+            <div class="text-900 font-bold text-5xl mb-5 text-white">Secure your 30-minute consultation with us today!</div>
             <button pButton pRipple label="Get Started" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="scrollToAnchor('contact-form', 100)"></button>
         </div>
     </div>
 </div>
-<div class="surface-section map-ht px-4 py-2 md:px-6 lg:px-8" style="background-image: url('assets/demo/images/landing/map.png'); background-size: cover;border: 16px solid #C8DFDC;"></div>
 
-<div class="grid grid-nogutter pt-8 pl-4 pr-4" id="contact-form">
+
+
+<!-- Calendly inline widget begin -->
+<!-- <div class="calendly-inline-widget" data-url="https://calendly.com/learningcurvetechnologies1/30min" style="min-width:320px;height:700px;"></div> -->
+<!-- Calendly inline widget end -->
+<!-- <div class="surface-section map-ht px-4 py-2 md:px-6 lg:px-8" style="background-image: url('assets/demo/images/landing/map.png'); background-size: cover;border: 16px solid #C8DFDC;"></div> -->
+
+<div class="grid grid-nogutter pt-8 pl-4 pr-4">
     <div class="grid">
         <div class="col-12 md:col-6">
         <form *ngIf="enquireForm" [formGroup]="enquireForm" (ngSubmit)="submitForm()">
@@ -72,4 +78,11 @@
         </ul>
     </div>
 </div>
+
 </div>
+<div class="surface-section map-ht px-4 py-2 md:px-6 lg:px-8" style="background-image: url('assets/demo/images/landing/map.png'); background-size: cover;border: 16px solid #C8DFDC;"></div>
+
+<div class="w-full" id="contact-form">
+    <iframe src="https://calendly.com/learningcurvetechnologies1/30min" style="height:700px" class="w-full"></iframe>
+</div>
+

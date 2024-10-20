@@ -35,6 +35,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { ContactComponent } from './components/contact/contact.component';
 import { ToastModule } from 'primeng/toast';
 import { BadgeModule } from 'primeng/badge';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
     imports: [
@@ -65,7 +66,8 @@ import { BadgeModule } from 'primeng/badge';
         RatingModule,
         AvatarModule,
         ToastModule,
-        BadgeModule
+        BadgeModule,
+        TableModule
     ],
     declarations: [
         LandingComponent, 
