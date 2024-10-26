@@ -33,3 +33,8 @@ a {
 .passive-tab {
     color: #59616e !important;
 }
+
+@media print
+  {
+  a, iframe, window {display:none;}
+  }

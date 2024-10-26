@@ -1,7 +1,7 @@
 
 <div class="grid grid-nogutter justify-content-center">
     <div class="surface-section-1 grid-nogutter">
-        <div class="px-4 py-8 md:px-6 lg:px-8">
+        <div class="px-4 pt-8 pb-0 md:px-6 lg:px-8">
             <div class="flex flex-wrap">
                 <div class="w-full xl:w-6 p-3 pr-5">
                     <div class="font-bold text-900 text-6xl mb-4 custom-header-text">Our Creative Expression to Realism</div>
@@ -20,7 +20,6 @@
                 </div>
                 <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-blue-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px;">
                     <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.12);" >
-                        <!-- <div id="overlay-div" class="z-5 w-full h-full absolute top-0 left-0" style="background: transparent;" (mouseover)="playVideo()" (mouseout)="pauseVideo()" (click)="playActualVideo()"></div> -->
                         <iframe id="videoId" width="560" height="315" src="https://www.youtube.com/embed/3gRYUJnDhd0?si=9FFMAtTjhpNhTIg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
                     </div>
                 </div>
@@ -28,97 +27,8 @@
         </div>
         
     </div>
-    
-    
-    <!-- <div class="surface-section px-4 md:px-6 lg:px-8" id="portfolio">    
-            <div class="col-12 px-0 sm:px-5">
-                <div class="flex flex-column md:flex-row justify-content-between align-items-center mb-4">
-                    <div class="flex flex-column text-center md:text-left">
-                        <span class="text-900 font-bold text-3xl">Portfolio</span>
-                        <span class="text-500 mr-0 md:mr-3">Creativity Unleashed! Mastery Displayed!</span>
-                    </div>
-                    <span class="p-input-icon-left w-full hidden md:w-auto md:flex">
-                        <i class="pi pi-search"></i>
-                        <input type="text" pinputtext="" placeholder="Search" class="p-inputtext p-component p-element w-full md:w-auto">
-                    </span>
-                </div>
-                <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value"></p-dropdown>
-                <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
-                    <p-tabPanel header="E-Learning"></p-tabPanel>
-                    <p-tabPanel header="ILT"></p-tabPanel>
-                    <p-tabPanel header="Graduate Content(UG and PG)"></p-tabPanel>
-                    <p-tabPanel header="K12"></p-tabPanel>
-                    <p-tabPanel header="Other Content Dev and Multimedia"></p-tabPanel>
-                </p-tabView>
-                <br/>
-                <div class="flex flex-wrap lg:flex-nowrap">
-                    
-                    <div class="surface-ground">
-                        <div class="grid grid-nogutter -mt-3 -ml-3 -mr-3">
-                            <div class="col-12 lg:col-12 p-3">
-                                <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/demo/images/landing/5.jpeg); min-height: 50rem;">
-                                    <div class="p-4 align-self-start">
-                                        <span class="text-white text-lg line-height-3 hidden lg:flex">Samples will be shared on request. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                        <span class="text-white text-lg line-height-3 flex lg:hidden">Samples will be shared on request</span>
-                                    </div>
-                                <div class="p-4 align-self-end">
-                                    <a tabindex="0" *ngIf="tabNumber === 0" href="assets/lct-story/story.html" target="_blank" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
-                                        <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
-                                    </a>
-                                    <a tabindex="0" *ngIf="tabNumber !== 0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
-                                        <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 lg:col-6">
-                            <div class="grid grid-nogutter lg:flex-column">
-                                <div class="col-12 p-3">
-                                    <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/demo/images/landing/1.png);">
-                                        <div class="p-4 align-self-start">
-                                            <div class="text-white text-2xl font-bold mb-2">Category Title</div>
-                                            <span class="text-white text-lg line-height-3">Quis varius quam quisque id diam</span>
-                                        </div>
-                                        <div class="p-4 align-self-end">
-                                            <a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
-                                                <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 p-3">
-                                    <div class="flex flex-column justify-content-between h-full w-full border-round bg-no-repeat bg-cover h-25rem" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/demo/images/landing/3.png);">
-                                        <div class="p-4 align-self-start">
-                                            <div class="text-white text-2xl font-bold mb-2">Category Title</div>
-                                            <span class="text-white text-lg line-height-3">Vitae purus faucibus ornare</span>
-                                        </div>
-                                        <div class="p-4 align-self-end">
-                                            <a tabindex="0" class="text-2xl cursor-pointer text-white flex align-items-center hover:text-primary transition-duration-150">View Sample
-                                                <i class="pi pi-fw pi-arrow-right text-2xl ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        
-    </div> -->
-    <p-dialog [header]="dialogHeader" 
-    [modal]="true"
-    [(visible)]="visible" 
-    [style]="{ width: '50rem' }" 
-    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
-    (onHide)="visible = false"
-    >
-        <p>
-            {{dialogContent}}
-        </p>
-    </p-dialog>
-    <div class="w-full pl-5">
 
+    <div class="w-full pl-5">
     <p-dialog [header]="dialogHeader" 
     [modal]="true"
     [(visible)]="visibleVideo" 
@@ -130,15 +40,17 @@
         {{dialogContent}}
     </p>
     <div class="w-full h-full align-items-center justify-content-center align-content-center">
-        <iframe width="560" height="450" [src]="videoLink" class="w-full"></iframe>
+        <!-- <iframe width="560" height="450" [src]="videoLink" class="w-full"></iframe> -->
     </div>
     
 </p-dialog>
+
+
     <div class="w-full pl-5">
 
        
-        <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value" (onChange)="clearFilter()"></p-dropdown>
-        <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true" (onChange)="clearFilter()">
+        <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value" (onChange)="clearFilter(dt2)"></p-dropdown>
+        <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true" (onChange)="clearFilter(dt2)">
             <p-tabPanel header="E-Learning"></p-tabPanel>
             <p-tabPanel header="ILT"></p-tabPanel>
             <p-tabPanel header="University / Academic"></p-tabPanel>
@@ -172,66 +84,43 @@
                         </div>
                     </div>
                 </p-accordionTab>
-                <p-divider styleclass="w-full m-0 p-0" class="p-element">
-                    <div role="separator" class="w-full m-0 p-0 p-divider p-component p-divider-horizontal p-divider-solid p-divider-left">
-                        <div class="p-divider-content"></div>
-                    </div>
-                </p-divider>
-                <p-accordionTab>
-                    <ng-template pTemplate="header">
-                        <span class="p-accordion-header-text ng-tns-c55-42 ng-star-inserted"> Type ({{typeNumber}}) </span>
-                    </ng-template>
-                    <div class="p-accordion-tab ng-tns-c55-42 p-accordion-tab-active">
-                        <div class="transition-all transition-duration-400 transition-ease-in-out ng-tns-c55-42">
-                            <div class="flex w-full justify-content-between" *ngFor="let typeOption of typeFilter">
-                                <div class="field-checkbox">
-                                    <p-checkbox 
-                                    [id]="typeOption.value"
-                                    [(ngModel)]="typeOption.selectedValue" 
-                                    [binary]="true" 
-                                    (onChange)="updateTypeFilter(typeOption.value, typeOption.selectedValue, dt2)"
-                                    inputId="binary" />
-                                    <label [for]="typeOption.value" class="text-900">{{typeOption.label}}</label>
-                                </div>
-                                
-                            </div>
-                           
-                            
-                          
-                        </div>
-                    </div>
-                </p-accordionTab>
+             
             </p-accordion>
 </div>
 <div class="w-full mt-3 lg:mt-0" style="min-height: 25rem;">
     
-    <p-table #dt2 dataKey="id" [value]="tabNumber === 0 ? eLearningArr : tabNumber === 1 ? iltArr : tabNumber === 2 ? universityArr: simulationArr" [globalFilterFields]="['type', 'catagory']" [rows]="5" [paginator]="true" [tableStyle]="{'min-width': '60rem'}">
+    <p-table #dt2 dataKey="id" [first]="first" [value]="tabNumber === 0 ? eLearningArr : tabNumber === 1 ? iltArr : tabNumber === 2 ? universityArr: simulationArr" [globalFilterFields]="['type', 'catagory']" [rows]="5" [paginator]="true" [tableStyle]="{'min-width': '60rem'}">
         <ng-template pTemplate="caption">
-            <p class=" w-full text-base text-red-600 text-center ">**Disclaimer: Samples are created by us but the IP rights of each still remains with the corresponding client.**</p> 
+            <p class=" w-full text-base text-red-600 text-center ">**Disclaimer: Samples here showcase our capabilities; however, the IP rights remain with our clients.**</p> 
         </ng-template>
         <ng-template pTemplate="body" let-content>
             <tr *ngIf="tabNumber === content.tabIndex">
-                <td style="max-width: 90px;">
-                    <div class="bg-blue-50 mr-2 flex align-items-center justify-content-center py-3 px-0 w-full min-ht-sq md:w-4 border-round">
-                        <i [class]="content.type === 'pdf' ? 'pi pi-file-pdf text-4xl' : content.type === 'video' ? 'pi pi-video text-4xl': 'pi pi-tablet text-4xl'"></i>
-                    </div>
-                </td>
+             
                 <td>
                     <div class="flex flex-column my-auto text-center pl-2 md:text-left">
                         <span class="text-2xl font-bold text-900 mb-3">{{content?.name}}</span>
                         <span class="flex align-items-center gap-2 mb-4">
-                            <span class="font-medium">{{content?.description.substring(0, 100)}} ...</span>
+                            <span class="font-medium">{{content?.description}}</span>
                         </span>
                     </div>
                 </td>
                 
                 <td>
-                    <div class="flex flex-column my-auto align-items-center text-center mr-0 lg:mr-3  md:text-center">
-                        <!-- <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin(); menu.click()"></button> -->
-                        <a pripple="" (click)="viewButton(content.path, content.name, content.type, content.description)" tabindex="0" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-ripple mb-3 p-element p-2 cursor-pointer w-9rem mx-auto lg:mx-0 border-round font-medium text-center border-1 border-primary text-primary transition-duration-150">View 
+                    <div class="flex flex-column justify-content-between my-auto border-200 border-solid border-round align-items-center align-content-center text-center mr-0 md:text-center" style="width: 150px; height: 120px">            
+                        <pdf-viewer class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'pdf' || content.type === 'video'" [src]="content.path"
+                        [render-text]="true"
+                        [original-size]="false"
+                        [show-all]="false" 
+                        [page]="1"
+                        style="width: 148px; height: 120px"
+                    ></pdf-viewer>
+                    <img style="width: 148px; height: 120px" class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'video' || content.type === 'sample'" [src]="content.thumbnail"/>
+                    <div class="flex flex-column my-auto align-items-center text-center mr-0 md:text-center">
+                        <a pripple="" (click)="viewButton(content.path, content.name, content.type, content.description, content.catagory)" tabindex="0" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-ripple p-element p-2 cursor-pointer custom-wth mx-auto lg:mx-0 border-round font-medium text-center border-1 border-primary text-primary transition-duration-150">View 
                         </a>
-                        <a class="text-600 text-sm cursor-pointer underline" (click)="readMore(content.name, content.description)">Read More</a>
                     </div>
+                    </div>
+                   
                 </td>
             </tr>
         </ng-template>

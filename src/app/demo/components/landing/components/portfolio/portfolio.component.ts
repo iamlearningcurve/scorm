@@ -19,7 +19,7 @@ export class PortfolioComponent {
   actualVideo = false;
   cancelPause = false;
   visibleVideo = false;
-  videoLink: any;
+  videoLink: any = '';
   tocDesc = `It is a navigational tool in Word, having a tabular list of
   session titles along with the topics, sub-topics, and learning
   objectives in each session. It serves as a road map, helping
@@ -127,70 +127,70 @@ export class PortfolioComponent {
   visible = false;
   dialogHeader = '';
   dialogContent = '';
+  first = 0;
   iltArr = [
      // Technical
-     {id: 0, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},   
-     {id: 1, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},    
-     {id: 2, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 3, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},    
-     {id: 4, name: 'Assignments', description: this.assessDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 5, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},    
-     {id: 6, name: 'Frequently Asked Questions (FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 7, name: 'Blog - The Future of SEO', description: this.blogDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: '', showC1: true, showC2: true},
+     {id: 0, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/1.TOC_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},   
+     {id: 1, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/2.Student_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
+     {id: 2, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/3.Trainer_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 3, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/4.Assignments_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
+     {id: 4, name: 'Assignments', description: this.assessDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/5.Question_Bank_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 5, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/6.Glossary_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
+     {id: 6, name: 'Frequently Asked Questions (FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/7.FAQs_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 7, name: 'Blog - The Future of SEO', description: this.blogDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/8.Blog_SOT_The Future_of_SEO.pdf', showC1: true, showC2: true, thumbnail: ''},
      //non-technical
-     {id: 8, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 9, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 10, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 11, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 12, name: 'Frequently Asked Questions (FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 13, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 14, name: 'Blog', description: this.blogDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 15, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: '', showC1: true, showC2: true},
+     {id: 8, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/1.TOC_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 9, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/2.Student_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 10, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/3.Trainer_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 11, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/4.Question_Bank_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 12, name: 'Frequently Asked Questions (FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/5.FAQs_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 13, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/6.Glossary_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 14, name: 'Blog', description: this.blogDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/7.Blog_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 15, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/8.Article_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
      //gaming
-     {id: 16, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 17, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 18, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 19, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 20, name: 'Mock Assessments', description: this.pqDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 21, name: 'Tips and Tricks', description: this.ttDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 22, name: 'Industry Best Practices', description: this.ibpDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
-     {id: 23, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: '', showC1: true, showC2: true},
+     {id: 16, name: 'Table Of Contents (TOC)', description: this.tocDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/1.TOC_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 17, name: 'Student Guide (SG) / Learner Guide (LG)', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/2.Student_Guide__AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 18, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/3.Trainer_Guide_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 19, name: 'Question Bank (Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/4.Question_Bank_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 20, name: 'Mock Assessments', description: this.pqDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/5.Mock_Assessments_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 21, name: 'Tips and Tricks', description: this.ttDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/6.Tips_Tricks_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 22, name: 'Industry Best Practices', description: this.ibpDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/7.Industry_Best_Practices_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 23, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/8.Article_AR_VR_Futuristic Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
   ];
 
   simulationArr = [
     //show-me
-    {id: 24, name: 'Show Me', description: this.showDesc, type: 'video', catagory: 'show-me', tabIndex:3, path: '', showC1: true, showC2: true},
+    {id: 24, name: 'Show Me', description: this.showDesc, type: 'video', catagory: 'show-me', tabIndex:3, path: 'https://www.youtube.com/embed/r89LYm0cJ9E?si=7Yg7GX6ZDJuZ2E24', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/r89LYm0cJ9E/maxresdefault.jpg'},
     //try-me
-    {id: 25, name: 'Try Me', description: this.tryDesc, type: 'sample', catagory: 'try-me', tabIndex:3, path: '', showC1: true, showC2: true},
+    // {id: 25, name: 'Try Me', description: this.tryDesc, type: 'sample', catagory: 'try-me', tabIndex:3, path: '', showC1: true, showC2: true, thumbnail: ''},
     //motion-graphics
-    {id: 26, name: 'Motion Graphics', description: this.mgDesc, type: 'video', catagory: 'motion-graphics', tabIndex:3, path: '', showC1: true, showC2: true},
+    {id: 26, name: 'Motion Graphics', description: this.mgDesc, type: 'video', catagory: 'motion-graphics', tabIndex:3, path: 'https://www.youtube.com/embed/-w3peHe-rDs?si=vyBosFYRTQXcXBHs', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/-w3peHe-rDs/maxresdefault.jpg'},
   ]
 
   eLearningArr = [
     //level-1
-    {id: 36, name: 'Story Board', description: this.mgDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level-1/Storyboard_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true},
-    {id: 37, name: 'Voice Over Script', description: this.vosDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level-1/Voice Over_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true},
-    {id: 38, name: 'Level 1 Video', description: this.level1Desc, type: 'video', catagory: 'level-1', tabIndex:0, path: 'https://www.youtube.com/embed/3gRYUJnDhd0?si=9FFMAtTjhpNhTIg9', showC1: true, showC2: true},
+    {id: 36, name: 'Story Board', description: this.mgDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/1.Storyboard_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 37, name: 'Voice Over Script', description: this.vosDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/2.Voice Over_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 38, name: 'Level 1 Video', description: this.level1Desc, type: 'video', catagory: 'level-1', tabIndex:0, path: 'https://www.youtube.com/embed/i6B64dwzxOE?si=tRy8_p7ZjiJG2uR9', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/i6B64dwzxOE/maxresdefault.jpg'},
     //level-2
-    {id: 39, name: 'Motion Graphics', description: this.level2SampleDesc, type: 'sample', catagory: 'level-2', tabIndex:0, path: 'assets/lct-story/story.html', showC1: true, showC2: true},
+    {id: 39, name: 'Motion Graphics', description: this.level2SampleDesc, type: 'sample', catagory: 'level-2', tabIndex:0, path: 'assets/docs/e-learning/level_2/story.html', showC1: true, showC2: true, thumbnail: 'assets/docs/e-learning/level_2/story_content/thumbnail.jpg'},
   ];
 
   universityArr = [
     //university
-    {id: 27, name: 'Table Of Contents (TOC)', description: this.utocDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},   
-    {id: 28, name: 'Self Learning Material', description: this.uslmDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},    
-    {id: 29, name: `Article`, description: this.uaDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},
-    {id: 30, name: 'Case Study', description: this.ucsDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},    
-    {id: 31, name: 'Web Link', description: this.uwlDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},
-    {id: 32, name: 'Question Bank', description: this.uqbDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},    
-    {id: 33, name: 'Training Video', description: this.utvDesc, type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},
-    {id: 34, name: 'Language Test (PTE)', description: '', type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},
-    {id: 35, name: 'Deliverables of University of Academic Project', description: '', type: 'pdf', catagory: '', tabIndex:2, path: '', showC1: true, showC2: true},
+    {id: 27, name: 'Table Of Contents (TOC)', description: this.utocDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/1.Table_of Contents_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},   
+    {id: 28, name: 'Self Learning Material', description: this.uslmDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/2.Self_Learning Material_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},    
+    {id: 29, name: `Article`, description: this.uaDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/3.Article_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 30, name: 'Case Study', description: this.ucsDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/4.Case_Study_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},    
+    {id: 31, name: 'Web Link', description: this.uwlDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/5.Web_Links_sample.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 32, name: 'Question Bank', description: this.uqbDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/6.Question_Bank_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},    
+    {id: 33, name: 'Training Video', description: this.utvDesc, type: 'video', catagory: '', tabIndex:2, path: 'https://www.youtube.com/embed/epvZ1T7QxhQ?si=Enwfi99blqqRK27b', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/epvZ1T7QxhQ/maxresdefault.jpg'}
   ];
 
   catagoryNumber = 0;
   typeNumber = 0;
-  constructor(public router: Router, private domSanitizer: DomSanitizer) { }
+  constructor(public router: Router, private domSanitizer: DomSanitizer) { 
+  }
 
   scrollToAnchor(location: string, wait: number): void {
     const element = document.querySelector('#' + location)
@@ -242,13 +242,14 @@ export class PortfolioComponent {
     table.filter(this.typeSelection, 'type', 'in')
   }
 
-  clearFilter() {
+  clearFilter(dt: any) {
     this.typeFilter.forEach(e => e.selectedValue = false);
     this.catagoryFilter.forEach(e => e.selectedValue = false);
     this.catagoryNumber = 0;
     this.typeNumber = 0;
     this.catagorySelection = [];
     this.typeSelection = [];
+    dt.first = 0;
   }
 
   readMore(header, description) {
@@ -265,18 +266,20 @@ export class PortfolioComponent {
     }, 12)    
   }
 
-  viewButton(link, name, type, description) {
-    this.videoLink = this.domSanitizer.bypassSecurityTrustResourceUrl(link);
+  viewButton(link, name, type, description, catagory) {
+    this.videoLink = 'pdf-viewer?name=' + name + '&catagory=' + catagory;
     this.dialogHeader = name;
     this.dialogContent = description
-    if (type === 'video') {
-      this.visibleVideo = true;
+    if (type === 'pdf') {
+      const bt = document.createElement('a');
+      bt.href = this.videoLink;
+      bt.target = "_blank";
+      bt.click();
     } else {
       const bt = document.createElement('a');
       bt.href = link;
       bt.target = "_blank";
       bt.click();
-    } 
-    // href="https://drive.google.com/file/d/1g4hQeSoENXqytY4pLdTq_5_1DgibfENx/view?usp=drive_link"
+    }      
   }
 }

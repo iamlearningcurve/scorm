@@ -36,6 +36,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ToastModule } from 'primeng/toast';
 import { BadgeModule } from 'primeng/badge';
 import { TableModule } from 'primeng/table';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component';
 
 @NgModule({
     imports: [
@@ -67,7 +69,8 @@ import { TableModule } from 'primeng/table';
         AvatarModule,
         ToastModule,
         BadgeModule,
-        TableModule
+        TableModule,
+        PdfViewerModule
     ],
     declarations: [
         LandingComponent, 
@@ -76,7 +79,8 @@ import { TableModule } from 'primeng/table';
         PortfolioComponent,
         CareersComponent,
         ServicesComponent,
-        ContactComponent
+        ContactComponent,
+        PdfViewerComponent
     ] 
 })
 export class LandingModule { }
