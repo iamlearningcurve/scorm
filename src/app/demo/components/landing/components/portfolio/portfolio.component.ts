@@ -260,7 +260,7 @@ export class PortfolioComponent {
   }
 
   viewButton(link, name, type, description, catagory) {
-    this.videoLink = 'pdf-viewer?name=' + name + '&catagory=' + catagory;
+    this.videoLink = 'preview?name=' + name + '&catagory=' + catagory;
     this.dialogHeader = name;
     this.dialogContent = description
     if (type === 'pdf') {

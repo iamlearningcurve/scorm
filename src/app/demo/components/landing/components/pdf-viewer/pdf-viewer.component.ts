@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './pdf-viewer.component.html',
   styleUrl: './pdf-viewer.component.scss'
 })
-export class PdfViewerComponent {
+export class PdfViewerComponent implements OnInit {
   videoLink = '';
 
   tocDesc = `A navigational tool listing the sessions of an ILT course,
@@ -139,17 +139,23 @@ dataArr = [
  {id: 33, name: 'Trainer Video', description: this.utvDesc, type: 'video', catagory: '', tabIndex:2, path: 'https://www.youtube.com/embed/epvZ1T7QxhQ?si=Enwfi99blqqRK27b', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/epvZ1T7QxhQ/maxresdefault.jpg'}
 ];
 subscriptions: Subscription = new Subscription();
-constructor(private router: Router,
+constructor(
   private route: ActivatedRoute,) {
   this.subscriptions.add(this.route.queryParams.subscribe((params: any) => {
     this.dataArr.forEach((e) => {
       if (e.name === params.name && e.catagory === params.catagory) {
         this.videoLink = e.path;
-
       }
     })
     
     
   }));
+}
+ngOnInit(): void {
+  
+}
+
+ngOnDestroy() {
+  this.subscriptions.unsubscribe();
 }
 }

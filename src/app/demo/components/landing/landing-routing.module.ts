@@ -7,7 +7,7 @@ import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component
 @NgModule({
     imports: [RouterModule.forChild([
         { path: '', component: LandingComponent },
-        { path: 'pdf-viewer', component: PdfViewerComponent },
+        { path: 'preview', component: PdfViewerComponent },
         { path: 'about', component: TeamsComponent }
     ])],
     exports: [RouterModule]
