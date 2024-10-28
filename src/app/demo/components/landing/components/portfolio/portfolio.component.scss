@@ -131,3 +131,7 @@
 .custom-wth {
     width: 9rem !important
 }
+
+:host ::ng-deep .ng2-pdf-viewer-container {
+ overflow: hidden;
+}

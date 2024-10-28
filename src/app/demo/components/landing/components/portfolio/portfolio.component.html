@@ -106,13 +106,13 @@
                 </td>
                 
                 <td>
-                    <div class="flex flex-column justify-content-between my-auto border-200 border-solid border-round align-items-center align-content-center text-center mr-0 md:text-center" style="width: 150px; height: 120px">            
-                        <pdf-viewer class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'pdf' || content.type === 'video'" [src]="content.path"
+                    <div class="flex overflow-hidden flex-column justify-content-between my-auto border-200 border-solid border-round align-items-center align-content-center text-center mr-0 md:text-center" style="width: 150px; height: 120px">            
+                        <pdf-viewer class="flex overflow-hidden pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'pdf' || content.type === 'video'" [src]="content.path"
                         [render-text]="true"
                         [original-size]="false"
                         [show-all]="false" 
                         [page]="1"
-                        style="width: 148px; height: 120px"
+                        style="width: 148px; height: 120px; overflow: hidden !important;"
                     ></pdf-viewer>
                     <img style="width: 148px; height: 120px" class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'video' || content.type === 'sample'" [src]="content.thumbnail"/>
                     <div class="flex flex-column my-auto align-items-center text-center mr-0 md:text-center">
@@ -126,7 +126,7 @@
         </ng-template>
         <ng-template pTemplate="emptymessage">
             <tr>
-                <td colspan="5">No content found.</td>
+                <td colspan="5">Coming soon ...</td>
             </tr>
         </ng-template>
        
