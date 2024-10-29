@@ -101,7 +101,6 @@ export class PortfolioComponent {
 
   catagorySelection = [];
   typeSelection = [];
-
   catagoryFilter = [
     {label: 'Technical',value: 'technical', type: 1, selectedValue: false},
     {label: 'Non-technical',value: 'non-technical', type: 1, selectedValue: false},
@@ -224,25 +223,11 @@ export class PortfolioComponent {
     table.filter(this.catagorySelection, 'catagory', 'in')
   }
 
-  updateTypeFilter(option, selectedValue, table) {
-    if (selectedValue) {
-      this.typeNumber +=1;
-      this.typeSelection.push(option)
-    } else {
-      this.typeNumber -=1;      
-      this.typeSelection.splice(this.typeSelection.indexOf(option), 1)
-    }
-
-    table.filter(this.typeSelection, 'type', 'in')
-  }
-
   clearFilter(dt: any) {
-    this.typeFilter.forEach(e => e.selectedValue = false);
+    dt.reset()
     this.catagoryFilter.forEach(e => e.selectedValue = false);
     this.catagoryNumber = 0;
-    this.typeNumber = 0;
     this.catagorySelection = [];
-    this.typeSelection = [];
     dt.first = 0;
   }
 
