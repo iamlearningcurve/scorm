@@ -1,4 +1,4 @@
-<div class="surface-0 flex justify-content-center">
+<div class="surface-0 flex justify-content-center" *ngIf="!pdf">
     <div id="home" class="landing-wrapper overflow-hidden">
         <div class="fixed w-full top-0 z-3" style="background-color: white;">
             <div class="mt-2 py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
@@ -288,3 +288,5 @@ By using the Services, you acknowledge that you have read, understood, and agree
     <p>Samples here showcase our capabilities; however, the IP rights remain with our clients. The samples shared here are extracts of client deliveries.
     </p>
 </p-dialog>
+
+<app-pdf-viewer *ngIf="pdf"></app-pdf-viewer>

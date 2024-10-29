@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 })
 export class LandingComponent {
     home = true;
+    pdf = false;
     portfolio = false;
     teams = false;
     careers = false;
@@ -19,8 +21,20 @@ export class LandingComponent {
     visibleTerms = false;
     visibleLegal = false;
     activeIndex = 0;
-    constructor(public layoutService: LayoutService, public router: Router) { 
+    subscriptions: Subscription = new Subscription();
+    constructor(public layoutService: LayoutService, public router: Router, private route: ActivatedRoute) { 
         this.currentYear = new Date().getFullYear().toString();
+        this.subscriptions.add(this.route.queryParams.subscribe((params: any) => {
+            if (params.name || params.catagory) {
+                this.pdf = true;
+                this.home= false;
+            } else {
+                this.home = true;
+                this.pdf = false;
+            }
+            
+            
+          }));
     }
 
     navToLogin() {
