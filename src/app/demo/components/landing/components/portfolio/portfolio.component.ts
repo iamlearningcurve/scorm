@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 
@@ -10,6 +10,7 @@ import { DomSanitizer} from '@angular/platform-browser';
 })
 export class PortfolioComponent {
   tabNumber = 0;
+  @Output() submitOutput = new EventEmitter();
   portfolioList = [
     {name: 'E-Learning', value: 0},
     {name: 'ILT', value: 1},
