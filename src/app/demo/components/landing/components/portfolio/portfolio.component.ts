@@ -111,19 +111,32 @@ export class PortfolioComponent {
     {label: 'Try Me',value: 'try-me', type: 3, selectedValue: false},
     {label: 'Motion Graphics',value: 'motion-graphics', type: 3, selectedValue: false}
   ];
-  
-  typeFilter = [
-    {label: 'Pdf', value: 'pdf', selectedValue: false},
-    {label: 'Sample', value: 'sample', selectedValue: false},
-    {label: 'Video', value: 'video', selectedValue: false}
-  ];
+
+type0 = [
+  {label: 'Level 1',value: 'level-1', type: 0, selectedValue: false, path: 'assets/demo/images/landing/level-1.png', description: '', category: 'E-learning', pdf: 2, video: 1, scorm: 0},
+  {label: 'Level 2',value: 'level-2', type: 0, selectedValue: false, path: 'assets/demo/images/landing/level-2-copy.png', description: '', category: 'E-learning', pdf: 0, video: 0, scorm: 1}
+]
+type1 = [
+    {label: 'Technical',value: 'technical', type: 1, selectedValue: false, path: 'assets/demo/images/landing/technical.png', description: '', pdf: 8, video: 0, scorm: 0},
+    {label: 'Non-technical',value: 'non-technical', type: 1, selectedValue: false, path: 'assets/demo/images/landing/show-me-2.png', description: '', pdf: 8, video: 0, scorm: 0},
+    {label: 'Gaming',value: 'gaming', type: 1, selectedValue: false, path: 'assets/demo/images/landing/level-2.png', description: '', pdf: 8, video: 0, scorm: 0}
+]
+
+type2 = [
+  {label: 'University/Academic',value: 'university', type: 1, selectedValue: false, path: 'assets/demo/images/landing/university.png', description: '', pdf: 2, video: 1, scorm: 0}
+]
+
+type3 = [
+    {label: 'Show Me',value: 'show-me', type: 3, selectedValue: false, path: 'assets/demo/images/landing/show-me.png', description: '', pdf: 0, video: 1, scorm: 0},
+    // {label: 'Try Me',value: 'try-me', type: 3, selectedValue: false, path: ''},
+    {label: 'Motion Graphics',value: 'motion-graphics', type: 3, selectedValue: false, path: 'assets/demo/images/landing/motion-graphics.png', description: '', pdf: 0, video: 1, scorm: 0}
+]
 
   visible = false;
   dialogHeader = '';
   dialogContent = '';
   first = 0;
-  iltArr = [
-     // Technical
+  iltArr1 = [
      {id: 0, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/1.TOC_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},   
      {id: 1, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/2.Student_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
      {id: 2, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/3.Trainer_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
@@ -131,47 +144,50 @@ export class PortfolioComponent {
      {id: 4, name: 'Assignments', description: this.assessDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/4.Assignments_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
      {id: 5, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/6.Glossary_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
      {id: 6, name: 'Frequently Asked Questions(FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/7.FAQs_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 7, name: 'Blog - The Future of SEO', description: this.blogDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/8.Blog_SOT_The Future_of_SEO.pdf', showC1: true, showC2: true, thumbnail: ''},
-     //non-technical
-     {id: 8, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/1.TOC_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 9, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/2.Student_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 10, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/3.Trainer_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 11, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/4.Question_Bank_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 12, name: 'Frequently Asked Questions(FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/5.FAQs_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 13, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/6.Glossary_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 14, name: 'Blog', description: this.blogDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/7.Blog_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 15, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/8.Article_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-     //gaming
-     {id: 16, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/1.TOC_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 17, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/2.Student_Guide__AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 18, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/3.Trainer_Guide_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 19, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/4.Question_Bank_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 20, name: 'Mock Assessments', description: this.pqDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/5.Mock_Assessments_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 21, name: 'Tips and Tricks', description: this.ttDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/6.Tips_Tricks_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 22, name: 'Industry Best Practices', description: this.ibpDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/7.Industry_Best_Practices_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-     {id: 23, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/8.Article_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 7, name: 'Blog - The Future of SEO', description: this.blogDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/8.Blog_SOT_The Future_of_SEO.pdf', showC1: true, showC2: true, thumbnail: ''}     
   ];
+  iltArr2 = [
+    {id: 8, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/1.TOC_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 9, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/2.Student_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 10, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/3.Trainer_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 11, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/4.Question_Bank_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 12, name: 'Frequently Asked Questions(FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/5.FAQs_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 13, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/6.Glossary_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 14, name: 'Blog', description: this.blogDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/7.Blog_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 15, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/8.Article_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+  ]
+
+  iltArr3 = [
+    {id: 16, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/1.TOC_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 17, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/2.Student_Guide__AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 18, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/3.Trainer_Guide_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 19, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/4.Question_Bank_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 20, name: 'Mock Assessments', description: this.pqDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/5.Mock_Assessments_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 21, name: 'Tips and Tricks', description: this.ttDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/6.Tips_Tricks_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 22, name: 'Industry Best Practices', description: this.ibpDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/7.Industry_Best_Practices_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 23, name: 'Article', description: this.articleDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/8.Article_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+  ]
 
   simulationArr = [
-    //show-me
     {id: 24, name: 'Show Me', description: this.showDesc, type: 'video', catagory: 'show-me', tabIndex:3, path: 'https://www.youtube.com/embed/r89LYm0cJ9E?si=7Yg7GX6ZDJuZ2E24', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/r89LYm0cJ9E/maxresdefault.jpg'},
-    //try-me
     // {id: 25, name: 'Try Me', description: this.tryDesc, type: 'sample', catagory: 'try-me', tabIndex:3, path: '', showC1: true, showC2: true, thumbnail: ''},
-    //motion-graphics
+  ]
+
+  simArr2 = [
     {id: 26, name: 'Motion Graphics', description: this.mgDesc, type: 'video', catagory: 'motion-graphics', tabIndex:3, path: 'https://www.youtube.com/embed/-w3peHe-rDs?si=vyBosFYRTQXcXBHs', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/-w3peHe-rDs/maxresdefault.jpg'},
   ]
 
   eLearningArr = [
-    //level-1
     {id: 36, name: 'StoryBoard(SB)', description: this.sbDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/1.Storyboard_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 37, name: 'Audio Script(AS)', description: this.vosDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/2.Voice Over_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 38, name: 'Level 1 Video', description: this.level1Desc, type: 'video', catagory: 'level-1', tabIndex:0, path: 'https://www.youtube.com/embed/i6B64dwzxOE?si=tRy8_p7ZjiJG2uR9', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/i6B64dwzxOE/maxresdefault.jpg'},
-    //level-2
-    {id: 39, name: 'Level 2 SCORM Package', description: this.level2SampleDesc, type: 'sample', catagory: 'level-2', tabIndex:0, path: 'assets/docs/e-learning/level_2/story.html', showC1: true, showC2: true, thumbnail: 'assets/docs/e-learning/level_2/story_content/thumbnail.jpg'},
   ];
 
+  eLearningArr2 = [
+    {id: 39, name: 'Level 2 SCORM Package', description: this.level2SampleDesc, type: 'sample', catagory: 'level-2', tabIndex:0, path: 'assets/docs/e-learning/level_2/story.html', showC1: true, showC2: true, thumbnail: 'assets/docs/e-learning/level_2/story_content/thumbnail.jpg'}
+  ]
+  arr = [];
   universityArr = [
-    //university
     {id: 27, name: 'Table of Contents(TOC)', description: this.utocDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/1.Table_of Contents_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},   
     {id: 28, name: 'Self-Learning Material(SLM)', description: this.uslmDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/2.Self_Learning Material_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},    
     {id: 29, name: `Article`, description: this.uaDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/3.Article_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},
@@ -180,9 +196,11 @@ export class PortfolioComponent {
     {id: 32, name: 'Question Bank', description: this.uqbDesc, type: 'pdf', catagory: '', tabIndex:2, path: 'assets/docs/university/6.Question_Bank_Sample.pdf', showC1: true, showC2: true, thumbnail: ''},    
     {id: 33, name: 'Trainer Video', description: this.utvDesc, type: 'video', catagory: '', tabIndex:2, path: 'https://www.youtube.com/embed/epvZ1T7QxhQ?si=Enwfi99blqqRK27b', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/epvZ1T7QxhQ/maxresdefault.jpg'}
   ];
-
+  layout: string = 'grid';
   catagoryNumber = 0;
   typeNumber = 0;
+  sortOrder!: number;
+  sortField!: string;
   constructor(public router: Router, private domSanitizer: DomSanitizer) { 
   }
 
@@ -220,7 +238,7 @@ export class PortfolioComponent {
       this.catagoryNumber -=1;
       this.catagorySelection.splice(this.catagorySelection.indexOf(option), 1)
     } 
-    table.filter(this.catagorySelection, 'catagory', 'in')
+    table.filter(this.catagorySelection)
   }
 
   clearFilter(dt: any) {
@@ -237,6 +255,10 @@ export class PortfolioComponent {
     this.visible = true;
   }
 
+  sample(e, dv) {
+    console.log(e, dv)
+    // dv.value = 
+  }
 
   playActualVideo() {
     this.actualVideo = true;
@@ -245,10 +267,29 @@ export class PortfolioComponent {
     }, 12)    
   }
 
+  openDialog(type) {
+    if (this.tabNumber === 0) {
+      this.dialogHeader = 'E-Learning';
+      this.arr = type === 'level-1' ? this.eLearningArr: this.eLearningArr2
+      this.visibleVideo = true;
+    } else if (this.tabNumber === 1) {
+      this.dialogHeader = 'ILT';
+      this.arr = type === 'technical' ? this.iltArr1: type === 'non-technical' ? this.iltArr2: this.iltArr3 
+      this.visibleVideo = true;
+    } else if (this.tabNumber === 2) {
+      this.dialogHeader = 'University / Academic';
+      this.arr = this.universityArr
+      this.visibleVideo = true;
+    } else {
+      this.dialogHeader = 'Simulations';
+      this.arr = type === 'show-me' ? this.simulationArr : this.simArr2
+      this.visibleVideo = true;
+    }
+   
+  }
+
   viewButton(link, name, type, description, catagory) {
     this.videoLink = '?name=' + name + '&catagory=' + catagory;
-    this.dialogHeader = name;
-    this.dialogContent = description
     if (type === 'pdf') {
       const bt = document.createElement('a');
       bt.href = this.videoLink;

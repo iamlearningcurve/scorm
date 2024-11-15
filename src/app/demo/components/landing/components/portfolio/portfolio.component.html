@@ -1,137 +1,187 @@
 
 <div class="grid grid-nogutter justify-content-center">
-    <div class="surface-section-1 grid-nogutter">
-        <div class="px-4 pt-8 pb-0 md:px-6 lg:px-8">
-            <div class="flex flex-wrap">
-                <div class="w-full xl:w-6 p-3 pr-5">
-                    <div class="font-bold text-900 text-6xl mb-4 custom-header-text">Our Creative Expression to Realism</div>
-                    <p class="mt-0 mb-4 text-700 line-height-3 text-xl text-justify">From creativity to precision, our development journey merges imagination with meticulous detail, crafting compelling narratives for diverse audiences.</p>
-                    <p class="mt-0 mb-4 text-700 line-height-3 text-xl text-justify">Our Deliveries</p>
-                    <div class="flex flex-wrap gap-2 align-items-center mb-4">
-                        <p-chip label="Interactive Learning Models" icon="pi pi-tablet" styleClass="bg-green"></p-chip>
-                        <p-chip label="Classroom Trainings" icon="pi pi-book"></p-chip>
-                        <p-chip label="Simulations" icon="pi pi-qrcode"></p-chip>
-                        <p-chip label="Virtual Reality Solutions" icon="pi pi-video"></p-chip>
-                        <p-chip label="Assessments & Questionnaires" icon="pi pi-file-o"></p-chip>
-                        <p-chip label="Online Help" icon="pi pi-question-circle"></p-chip><br/>
-                    </div>
-                   
-                    <button pButton pRipple label="Explore More" type="button" class="mr-3 p-button-raised cursor-pointer z-2 txt-yellow-border" style="background-color: rgb(56,84,154); color: white !important" (click)="scrollToAnchor('portfolio', 100)"></button>
-                </div>
-                <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-blue-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px;">
-                    <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.12);" >
-                        <iframe id="videoId" width="560" height="315" src="https://www.youtube.com/embed/3gRYUJnDhd0?si=9FFMAtTjhpNhTIg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+    <div class="surface-section-1 grid-nogutter">   
     </div>
 
     <div class="w-full pl-5">
     <p-dialog [header]="dialogHeader" 
     [modal]="true"
     [(visible)]="visibleVideo" 
-    [style]="{ width: '800px', height: '850px' }" 
+    [style]="{ width: '800px', height: '800px' , 'background-color': '#eff3f8'}" 
     [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
     (onHide)="visibleVideo = false"
     >
-    <p class="text-900">
-        {{dialogContent}}
-    </p>
-    <div class="w-full h-full align-items-center justify-content-center align-content-center">
-        <!-- <iframe width="560" height="450" [src]="videoLink" class="w-full"></iframe> -->
+    <p class="font-italic text-xl custom-color text-center">Click the <b>Info</b> and <b>View</b> buttons to know more</p>
+    <div class="border-round p-4">       
+        <div class="grid w-full justify-content-center">
+            <div class="col-12 sm:col-6 lg:col-3 xl:col-3 p-2" *ngFor="let sample of arr">
+                <div class="flex flex-column gap-1 justify-content-between w-full text-center surface-card border-1 border-round border-200 custom-ht">
+                    <div class="border-1 border-200 surface-50 flex align-items-center justify-content-center border-round mb-3 mx-auto" style="width: 120px; height: 120px;">
+                        <pdf-viewer class="flex overflow-hidden pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="sample.type === 'pdf' || sample.type === 'video'" [src]="sample.path"
+                            [render-text]="true"
+                            [original-size]="false"
+                            [show-all]="false" 
+                            [page]="1"
+                            style="width: 120px; height: 120px; overflow: hidden !important;">
+                        </pdf-viewer>
+                        <img [style]="sample.name === 'Show Me' || sample.name === 'Motion Graphics'? 'width: 150px; height: 120px': 'width: 120px; height: 120px'" class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="sample.type === 'video' || sample.type === 'sample'" [src]="sample.thumbnail"/>
+                    </div>
+                    
+                    <span class="text-600 font-medium">{{sample.name}}</span>
+                    <p-overlayPanel #op>
+                        <div class="flex flex-column gap-3 w-25rem">
+                            <div>
+                                <span class="font-medium text-900 font-bold block mb-2">Description</span>
+                                <span class="font-medium text-900 block mb-2">{{sample.description}}</span>
+                            </div>
+                        </div>
+                    </p-overlayPanel>
+                    <div class="flex flex-row gap-2 mt-2 mb-2 justify-content-center">
+                        <p-button label="Info" icon="pi pi-info-circle" severity="secondary" (click)="op.toggle($event)"/>
+                        <!-- <p-button label="View" severity="secondary" (click)="viewButton(sample.path, sample.name, sample.type, sample.description, sample.catagory)"/> -->
+                        <!-- <button pButton pRipple label="Info" icon="pi pi-info-circle" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500 p-2" (click)="op.toggle($event)"></button>-->
+                        <button pButton pRipple label="View" icon="pi pi-eye" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white p-2" (click)="viewButton(sample.path, sample.name, sample.type, sample.description, sample.catagory)"></button> 
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
     </div>
-    
 </p-dialog>
 
 
     <div class="w-full pl-5">
 
        
-        <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value" (onChange)="clearFilter(dt2)"></p-dropdown>
-        <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true" (onChange)="clearFilter(dt2)">
+        <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value"></p-dropdown>
+        <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
             <p-tabPanel header="E-Learning"></p-tabPanel>
             <p-tabPanel header="ILT"></p-tabPanel>
             <p-tabPanel header="University / Academic"></p-tabPanel>
             <p-tabPanel header="Simulations"></p-tabPanel>
         </p-tabView>
     </div>
+    <p class="w-full text-base text-red-600 text-center mt-4 font-bold">**Disclaimer: Samples here showcase our capabilities; however, the IP rights remain with our clients.**</p> 
+
+    <div class="flex p-5 pt-0 flex-wrap w-full lg:flex-nowrap" id="portfolio">
     
-    <div class="flex p-5 flex-wrap w-full lg:flex-nowrap" id="portfolio">
-        
-        <div class="col-fixed lg:col-2 mr-4 flex p-0 flex-column w-full lg:w-3">
-            
-            <p-accordion [multiple]="true" [activeIndex]="[0, 1]">
-                <p-accordionTab>
-                    <ng-template pTemplate="header">
-                        <span class="p-accordion-header-text ng-tns-c55-42 ng-star-inserted"> Catagory ({{catagoryNumber}}) </span>
-                    </ng-template>
-                    <div class="p-accordion-tab ng-tns-c55-42 p-accordion-tab-active">
-                        <div class="transition-all transition-duration-400 transition-ease-in-out ng-tns-c55-42">
-                            <div class="flex w-full justify-content-between" *ngFor="let option of catagoryFilter">
-                                <div class="field-checkbox" *ngIf="option.type === tabNumber">
-                                    <p-checkbox 
-                                        [id]="option.value"
-                                        [(ngModel)]="option.selectedValue" 
-                                        [binary]="true" 
-                                        (onChange)="updateCatagoryFilter(option.value, option.selectedValue, dt2)"
-                                        inputId="binary" />
-                                    <label [for]="option.value" class="text-900">{{option.label}}</label>
-                                </div>
-                            </div>        
-                            <a *ngIf="tabNumber === 2" class="block my-3 text-blue-700 font-medium">No items available ...</a>
+<ng-container *ngIf="tabNumber === 0">
+    <div class="col-12 xl:col-6" *ngFor="let product of type0">
+        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+            <div class="relative">
+                <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+            </div>
+            <div class="flex flex-column w-full gap-3">
+                <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
+                    <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
+                    <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
+                            <i class="pi pi-file-pdf mr-2"></i>
+                            <span class="font-medium">{{product.pdf}} pdf(s)</span>
+                        </p>
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.video > 0">
+                            <i class="pi pi-video mr-2"></i>
+                            <span class="font-medium">{{product.video}} Video(s)</span>
+                        </p>
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.scorm > 0">
+                            <i class="pi pi-book mr-2"></i>
+                            <span class="font-medium">{{product.scorm}} Scorm Package</span>
+                        </p>
+                    </div>
+                    <button pButton pRipple label="View Sample(s)" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="openDialog(product.value)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+    
+    <ng-container *ngIf="tabNumber === 1">
+        <div class="col-12 xl:col-4" *ngFor="let product of type1">
+            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+                <div class="relative">
+                    <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+                </div>
+                <div class="flex flex-column w-full gap-3">
+                    <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
+                        <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
+                        <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
+                                <i class="pi pi-file-pdf mr-2"></i>
+                                <span class="font-medium">{{product.pdf}} pdf(s)</span>
+                            </p>
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.video > 0">
+                                <i class="pi pi-video mr-2"></i>
+                                <span class="font-medium">{{product.video}} Video(s)</span>
+                            </p>
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.scorm > 0">
+                                <i class="pi pi-book mr-2"></i>
+                                <span class="font-medium">{{product.scorm}} Scorm Package</span>
+                            </p>
                         </div>
+                        <button pButton pRipple label="View Sample(s)" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="openDialog(product.value)"></button>
                     </div>
-                </p-accordionTab>
-             
-            </p-accordion>
-</div>
-<div class="w-full mt-3 lg:mt-0" style="min-height: 25rem;">
-    
-    <p-table #dt2 dataKey="id" [first]="first" [value]="tabNumber === 0 ? eLearningArr : tabNumber === 1 ? iltArr : tabNumber === 2 ? universityArr: simulationArr" [globalFilterFields]="['type', 'catagory']" [rows]="5" [paginator]="true" [tableStyle]="{'min-width': '60rem'}">
-        <ng-template pTemplate="caption">
-            <p class=" w-full text-base text-red-600 text-center ">**Disclaimer: Samples here showcase our capabilities; however, the IP rights remain with our clients.**</p> 
-        </ng-template>
-        <ng-template pTemplate="body" let-content>
-            <tr *ngIf="tabNumber === content.tabIndex">
-             
-                <td>
-                    <div class="flex flex-column my-auto text-center pl-2 md:text-left">
-                        <span class="text-2xl font-bold text-900 mb-3">{{content?.name}}</span>
-                        <span class="flex align-items-center gap-2 mb-4">
-                            <span class="font-medium">{{content?.description}}</span>
-                        </span>
-                    </div>
-                </td>
-                
-                <td>
-                    <div class="flex overflow-hidden flex-column justify-content-between my-auto border-200 border-solid border-round align-items-center align-content-center text-center mr-0 md:text-center" style="width: 150px; height: 120px">            
-                        <pdf-viewer class="flex overflow-hidden pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'pdf' || content.type === 'video'" [src]="content.path"
-                        [render-text]="true"
-                        [original-size]="false"
-                        [show-all]="false" 
-                        [page]="1"
-                        style="width: 148px; height: 120px; overflow: hidden !important;"
-                    ></pdf-viewer>
-                    <img style="width: 148px; height: 120px" class="flex pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="content.type === 'video' || content.type === 'sample'" [src]="content.thumbnail"/>
-                    <div class="flex flex-column my-auto align-items-center text-center mr-0 md:text-center">
-                        <a pripple="" (click)="viewButton(content.path, content.name, content.type, content.description, content.catagory)" tabindex="0" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-ripple p-element p-2 cursor-pointer custom-wth mx-auto lg:mx-0 border-round font-medium text-center border-1 border-primary text-primary transition-duration-150">View 
-                        </a>
-                    </div>
-                    </div>
-                   
-                </td>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="emptymessage">
-            <tr>
-                <td colspan="5">Coming soon ...</td>
-            </tr>
-        </ng-template>
-       
-    </p-table>
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
    
+    <ng-container *ngIf="tabNumber === 2">
+        <div class="col-12 xl:col-12" *ngFor="let product of type2">
+            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+                <div class="relative"><img [src]="product.path" width="218" height="180" alt="Image" class="border-round w-full h-full">
+                </div>
+                <div class="flex flex-column w-full gap-3">
+                    <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
+                        <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
+                        <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
+                                <i class="pi pi-file-pdf mr-2"></i>
+                                <span class="font-medium">{{product.pdf}} pdf(s)</span>
+                            </p>
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.video > 0">
+                                <i class="pi pi-video mr-2"></i>
+                                <span class="font-medium">{{product.video}} Video(s)</span>
+                            </p>
+                            <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.scorm > 0">
+                                <i class="pi pi-book mr-2"></i>
+                                <span class="font-medium">{{product.scorm}} Scorm Package</span>
+                            </p>
+                        </div>
+                        <button pButton pRipple label="View Sample(s)" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="openDialog(product.value)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+   <ng-container *ngIf="tabNumber === 3">
+    <div class="col-12 xl:col-6" *ngFor="let product of type3">
+        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+            <div class="relative"><img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+            </div>
+            <div class="flex flex-column w-full gap-3">
+                <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
+                    <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
+                    <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
+                            <i class="pi pi-file-pdf mr-2"></i>
+                            <span class="font-medium">{{product.pdf}} pdf(s)</span>
+                        </p>
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.video > 0">
+                            <i class="pi pi-video mr-2"></i>
+                            <span class="font-medium">{{product.video}} Video(s)</span>
+                        </p>
+                        <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.scorm > 0">
+                            <i class="pi pi-book mr-2"></i>
+                            <span class="font-medium">{{product.scorm}} Scorm Package</span>
+                        </p>
+                    </div>
+                    <button pButton pRipple label="View Sample(s)" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white" (click)="openDialog(product.value)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+   </ng-container>
+    
+</div>

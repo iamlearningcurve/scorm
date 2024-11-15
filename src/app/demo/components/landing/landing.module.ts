@@ -38,6 +38,8 @@ import { BadgeModule } from 'primeng/badge';
 import { TableModule } from 'primeng/table';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @NgModule({
     imports: [
@@ -70,7 +72,10 @@ import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component
         ToastModule,
         BadgeModule,
         TableModule,
-        PdfViewerModule
+        PdfViewerModule,
+        DataViewModule,
+        MultiSelectModule,
+        OverlayPanelModule
     ],
     declarations: [
         LandingComponent, 

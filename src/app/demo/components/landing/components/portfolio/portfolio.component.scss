@@ -135,3 +135,24 @@
 :host ::ng-deep .ng2-pdf-viewer-container {
  overflow: hidden;
 }
+
+.custom-dimensions {
+    min-height: 350px !important;
+}
+
+.custom-info {
+    cursor: pointer;
+    color: red;
+}
+
+.custom-ht {
+    min-height: 226px; 
+}
+
+.custom-color {
+    color: rgb(21, 131, 111);
+}
+
+:host ::ng-deep .p-button {
+    padding: 0.5rem;
+}
