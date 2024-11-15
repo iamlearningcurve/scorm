@@ -28,6 +28,7 @@ export class LandingComponent {
             if (params.name || params.catagory) {
                 this.pdf = true;
                 this.home= false;
+                document.getElementById('html').classList.add("overflow-hidden");
             } else {
                 this.home = true;
                 this.pdf = false;
