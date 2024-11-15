@@ -16,7 +16,7 @@
         <div class="grid w-full justify-content-center">
             <div class="col-12 sm:col-6 lg:col-3 xl:col-3 p-2" *ngFor="let sample of arr">
                 <div class="flex flex-column gap-1 justify-content-between w-full text-center surface-card border-1 border-round border-200 custom-ht">
-                    <div class="border-1 border-200 surface-50 flex align-items-center justify-content-center border-round mb-3 mx-auto" style="width: 120px; height: 120px;">
+                    <div class="border-1 border-200 surface-50 flex align-items-center justify-content-center border-round mb-3 mx-auto overflow-hidden" style="width: 121px; height: 120px;">
                         <pdf-viewer class="flex overflow-hidden pointer-events-none flex-column my-auto align-items-center text-center mr-0  md:text-center" *ngIf="sample.type === 'pdf' || sample.type === 'video'" [src]="sample.path"
                             [render-text]="true"
                             [original-size]="false"
