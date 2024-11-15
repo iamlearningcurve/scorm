@@ -68,14 +68,14 @@
     
 <ng-container *ngIf="tabNumber === 0">
     <div class="col-12 xl:col-6" *ngFor="let product of type0">
-        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
             <div class="relative">
                 <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
             </div>
             <div class="flex flex-column w-full gap-3">
                 <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
                     <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
-                    <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                    <div class="flex w-full flex-wrap justify-content-start gap-5 xl:h-2rem mt-auto">
                         <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
                             <i class="pi pi-file-pdf mr-2"></i>
                             <span class="font-medium">{{product.pdf}} pdf(s)</span>
@@ -98,14 +98,14 @@
     
     <ng-container *ngIf="tabNumber === 1">
         <div class="col-12 xl:col-4" *ngFor="let product of type1">
-            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
                 <div class="relative">
                     <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
                 </div>
                 <div class="flex flex-column w-full gap-3">
                     <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
                         <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
-                        <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                        <div class="flex w-full flex-wrap justify-content-start gap-5 xl:h-2rem mt-auto">
                             <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
                                 <i class="pi pi-file-pdf mr-2"></i>
                                 <span class="font-medium">{{product.pdf}} pdf(s)</span>
@@ -128,13 +128,13 @@
    
     <ng-container *ngIf="tabNumber === 2">
         <div class="col-12 xl:col-12" *ngFor="let product of type2">
-            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size custom-min-width">
                 <div class="relative"><img [src]="product.path" width="218" height="180" alt="Image" class="border-round w-full h-full">
                 </div>
                 <div class="flex flex-column w-full gap-3">
                     <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
                         <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
-                        <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                        <div class="flex w-full flex-wrap justify-content-start gap-5 xl:h-2rem mt-auto">
                             <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
                                 <i class="pi pi-file-pdf mr-2"></i>
                                 <span class="font-medium">{{product.pdf}} pdf(s)</span>
@@ -153,16 +153,17 @@
                 </div>
             </div>
         </div>
+        <div class="custom-min-width-2"></div>
     </ng-container>
    <ng-container *ngIf="tabNumber === 3">
     <div class="col-12 xl:col-6" *ngFor="let product of type3">
-        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card">
+        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size custom-min-width">
             <div class="relative"><img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
             </div>
             <div class="flex flex-column w-full gap-3">
                 <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
                     <p class="font-semibold text-lg mt-0 mb-0">{{product.label}}</p>
-                    <div class="flex w-full flex-wrap justify-content-between xl:h-2rem mt-auto">
+                    <div class="flex w-full flex-wrap justify-content-start gap-5 xl:h-2rem mt-auto">
                         <p class="text-base flex align-items-center text-900 mt-0 mb-1" *ngIf="product.pdf > 0">
                             <i class="pi pi-file-pdf mr-2"></i>
                             <span class="font-medium">{{product.pdf}} pdf(s)</span>

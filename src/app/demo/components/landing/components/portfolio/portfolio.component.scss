@@ -156,3 +156,16 @@
 :host ::ng-deep .p-button {
     padding: 0.5rem;
 }
+
+.uniform-size {
+    min-height: 183px !important;
+    max-height: 183px !important;
+}
+
+.custom-min-width {
+    min-width: 650px !important;
+}
+
+.custom-min-width-2 {
+    min-width: 1320px !important;
+}
