@@ -24,80 +24,80 @@ export class PortfolioComponent {
   tocDesc = `A navigational tool listing the sessions of an ILT course,
   along with the topics, sub-topics, and learning objectives for
   each session; a road map helping the learners to navigate
-  and locate specific parts quickly within the course.`;
+  and locate specific parts quickly within the course`;
   sgDesc = `A learning guide containing a detailed explanation of topics
-  listed in the TOC.`;
+  listed in the TOC`;
   tgDesc = `A guide for the trainers made by converting PPTs into PDFs
-  for explaining the topics of the SG / LG.`;
+  for explaining the topics of the SG / LG`;
   qbDesc = `A repository of quiz having different types of questions and
   options to choose from, derived from the SG / LG content,
-  for the whole course.`;
+  for the whole course`;
   pqDesc = `A set of additional questions in HTML for students to attempt
-  at the end of each session.`;
+  at the end of each session`;
   assessDesc = `A set of lab exercises containing a case study / scenario-
   based problem per session, which students should solve at
-  the end of each session.`
+  the end of each session`
   blogDesc = `An interesting document having personalized opinions or
   experiences concerning a topic or concept relevant to the
-  course.`;
+  course`;
   faqDesc = `A repository of industry-level questions that are asked in the
-  interviews but whose answers do not exist directly in the SG / LG.`;
+  interviews but whose answers do not exist directly in the SG / LG`;
   glossaryDesc = `A repository of alphabetically listed important terms in the
-  course along with a brief explanation of what that term is.`;
+  course along with a brief explanation of what that term is`;
   articleDesc = `An informational document of one-two pages having
   interesting writeup about an important topic relevant to the
   course (including figures or codes/commands wherever applicable)`;
   ibpDesc = `A repository of the best practices implemented currently in
-  the corresponding industry.`;
+  the corresponding industry`;
   ttDesc = `A repository of tips and tricks pertaining to a tool or
-  technology taught in the course.`;
+  technology taught in the course`;
 
   showDesc = `A video demonstrating the recorded steps and its
   corresponding captions to teach a step-by step process
-  to fulfill the specified learning objective.`;
+  to fulfill the specified learning objective`;
   tryDesc = `An interactive HTML page wherein the learners perform
   the steps as per the general instructions to fulfill the
-  specified learning objective.`;
+  specified learning objective`;
   mgDesc = `A video demonstrating the recorded steps with audio
   (optional) to teach how to apply motion to any suitable
-  graphic based on the learning objective.`;
+  graphic based on the learning objective`;
 
   sbDesc = `A visual tool organizing the content of a module in an
   engaging way, showing how the course's structure,
   content, graphics, animations, interactions, and
-  assessments will flow.`;
+  assessments will flow`;
   vosDesc = `A guide for the audio recorder, having the audio text to
-  be recorded per screen designed in the SB.`;
+  be recorded per screen designed in the SB`;
   level1Desc = `A non-interactive video acting as the final output of Level
-  1 e-learning course to be uploaded on an LMS.`;
+  1 e-learning course to be uploaded on an LMS`;
   level2SampleDesc = `An interactive file acting as the final output of Level 2 e-
-  learning course to be uploaded on an LMS.`;
+  learning course to be uploaded on an LMS`;
 
   utvDesc = `An instructional video created to teach specific skills and
   concepts to the learners for enhancing learning and ensuring
-  better retention.`;
+  better retention`;
   uqbDesc = `A collection of assessment questions of various categories
   like MCQs, Fill in the Blanks, True/False, Descriptive, and
   Higher Order Thinking Skills (HOTS) with different difficulty
-  levels to test the learners’ knowledge.`;
+  levels to test the learners’ knowledge`;
   uwlDesc = `A repository of hyperlinks to subject-relevant online content
   or external web pages acting as additional resources for the
-  learners.`;
+  learners`;
   ucsDesc = `A collection of two real-world scenarios, problems, or
   situations outlining the challenges faced by individuals,
   organizations, or systems, and the implemented solutions for
-  the same.`;
+  the same`;
   uaDesc = `An informational document providing additional information
   or analysis of a particular topic by sharing facts, opinions, or
-  research findings.`;
+  research findings`;
   uslmDesc = `An educational resource designed for independent study,
   enabling students to acquire knowledge at their own pace; a
   provider of detailed information about the subject and is
   divided into sections like introduction, main sections, sub
-  sections, summary, keywords, assessment, and references.`;
+  sections, summary, keywords, assessment, and references`;
   utocDesc = `A navigational tool listing the main topics and sub-topics for
   each subject, a road map helping the learners to navigate
-  and locate specific parts quickly within the subject.`;
+  and locate specific parts quickly within the subject`;
 
   catagorySelection = [];
   typeSelection = [];

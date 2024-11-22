@@ -18,8 +18,11 @@ $gutter: 1rem; //for primeflex grid system
 }
 
 .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
-    color: #15836F !important;
-    border-color: #15836F !important;
+    color: #eeeeee;
+    /* border-color: #eeeeee !important; */
+    background: rgb(56,84,154) !important;
+    
+    border: 1px solid #eeeeee !important;
 }
 
 a {

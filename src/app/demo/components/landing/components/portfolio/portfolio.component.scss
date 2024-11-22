@@ -1,7 +1,6 @@
 .responsive-tab-view .p-tabview-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
-  
     li {
       flex: 0 0 auto;
     }
@@ -169,3 +168,14 @@
 .custom-min-width-2 {
     min-width: 1320px !important;
 }
+
+.custom-pos {
+    background-position-x: center;
+    background-position-y: center;
+}
+
+// :host ::ng-deep .p-button:not(:disabled):hover  {
+//     background: #475569;
+//     color: #ffffff;
+//     border-color: #475569;
+// }

@@ -1,8 +1,14 @@
 
 <div class="grid grid-nogutter justify-content-center">
-    <div class="surface-section-1 grid-nogutter">   
-    </div>
-
+    <!-- <div class="surface-section-1 grid-nogutter">
+        
+        
+    </div> -->
+    <div class="w-full relative p-8 overflow-hidden bg-no-repeat bg-cover custom-pos" style="background-image: url('assets/demo/images/landing/hero-5.png');"><div class="text-center my-6 relative"><div class="text-6xl font-bold mb-1 text-white">Transforming Knowledge to </div><div class="text-6xl text-blue-300 font-bold mb-4">Impactful Learning Experiences</div><p class="mt-0 mb-3 line-height-3 text-center mx-auto text-blue-100" style="max-width: 500px;">Ready to elevate your learning experience?</p><div class="flex align-items-center justify-content-center flex-wrap">
+        <button type="button" label="Let's Talk" pbutton="" pripple="" class="p-element p-ripple p-3 mt-3 p-button p-component" style="background-color: rgb(56,84,154)" (click)="scrollToAnchor('portfolio', 100)">
+        <span class="p-button-label">Learn More</span>
+        <span class="p-ink"></span>
+    </button></div></div></div>
     <div class="w-full pl-5">
     <p-dialog [header]="dialogHeader" 
     [modal]="true"
@@ -11,7 +17,7 @@
     [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
     (onHide)="visibleVideo = false"
     >
-    <p class="font-italic text-xl custom-color text-center">Click the <b>Info</b> and <b>View</b> buttons to know more</p>
+    <p class="font-italic text-xl custom-color text-center">Click the <b>Info</b> and <b>View</b> buttons to know more.</p>
     <div class="border-round p-4">       
         <div class="grid w-full justify-content-center">
             <div class="col-12 sm:col-6 lg:col-3 xl:col-3 p-2" *ngFor="let sample of arr">
@@ -32,15 +38,16 @@
                         <div class="flex flex-column gap-3 w-25rem">
                             <div>
                                 <span class="font-medium text-900 font-bold block mb-2">Description</span>
-                                <span class="font-medium text-900 block mb-2">{{sample.description}}</span>
+                                <span class="font-medium text-900 block mb-2 text-justify">{{sample.description}}</span>
                             </div>
                         </div>
                     </p-overlayPanel>
                     <div class="flex flex-row gap-2 mt-2 mb-2 justify-content-center">
-                        <p-button label="Info" icon="pi pi-info-circle" severity="secondary" (click)="op.toggle($event)"/>
+                        <!-- <p-button label="Info" icon="pi pi-info-circle" severity="secondary" (click)="op.toggle($event)"/> -->
                         <!-- <p-button label="View" severity="secondary" (click)="viewButton(sample.path, sample.name, sample.type, sample.description, sample.catagory)"/> -->
                         <!-- <button pButton pRipple label="Info" icon="pi pi-info-circle" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500 p-2" (click)="op.toggle($event)"></button>-->
-                        <button pButton pRipple label="View" icon="pi pi-eye" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white p-2" (click)="viewButton(sample.path, sample.name, sample.type, sample.description, sample.catagory)"></button> 
+                        <button pButton pRipple label="Info" icon="pi pi-info-circle" style="background-color: #64748b !important; color: white !important; border: #64748b !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white p-2 cust-but" (click)="op.toggle($event)"></button>
+                        <button pButton pRipple label="View" icon="pi pi-eye" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none font-light line-height-2 bg-blue-500 text-white p-2 cust-but" (click)="viewButton(sample.path, sample.name, sample.type, sample.description, sample.catagory)"></button> 
                     </div>
                 </div>
                 
@@ -55,7 +62,7 @@
 
        
         <p-dropdown class="flex lg:hidden" appendTo="body" [options]="portfolioList" [(ngModel)]="tabNumber" optionLabel="name" optionValue="value"></p-dropdown>
-        <p-tabView class="responsive-tab-view hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
+        <p-tabView class="responsive-tab-view ml-2 hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
             <p-tabPanel header="E-Learning"></p-tabPanel>
             <p-tabPanel header="ILT"></p-tabPanel>
             <p-tabPanel header="University / Academic"></p-tabPanel>
@@ -69,8 +76,11 @@
 <ng-container *ngIf="tabNumber === 0">
     <div class="col-12 xl:col-6" *ngFor="let product of type0">
         <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
-            <div class="relative">
+            <div class="relative hidden lg:flex md:flex">
                 <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+            </div>
+            <div class="relative flex lg:hidden md:hidden">
+                <img [src]="product.path" alt="Image" width="50" height="40" class="border-round">
             </div>
             <div class="flex flex-column w-full gap-3">
                 <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
@@ -99,8 +109,11 @@
     <ng-container *ngIf="tabNumber === 1">
         <div class="col-12 xl:col-4" *ngFor="let product of type1">
             <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
-                <div class="relative">
+                <div class="relative hidden lg:flex md:flex">
                     <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+                </div>
+                <div class="relative flex lg:hidden md:hidden">
+                    <img [src]="product.path" alt="Image" width="50" height="40" class="border-round">
                 </div>
                 <div class="flex flex-column w-full gap-3">
                     <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
@@ -128,8 +141,12 @@
    
     <ng-container *ngIf="tabNumber === 2">
         <div class="col-12 xl:col-12" *ngFor="let product of type2">
-            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size custom-min-width">
-                <div class="relative"><img [src]="product.path" width="218" height="180" alt="Image" class="border-round w-full h-full">
+            <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
+                <div class="relative hidden lg:flex md:flex">
+                    <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+                </div>
+                <div class="relative flex lg:hidden md:hidden">
+                    <img [src]="product.path" alt="Image" width="50" height="40" class="border-round">
                 </div>
                 <div class="flex flex-column w-full gap-3">
                     <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
@@ -157,8 +174,12 @@
     </ng-container>
    <ng-container *ngIf="tabNumber === 3">
     <div class="col-12 xl:col-6" *ngFor="let product of type3">
-        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size custom-min-width">
-            <div class="relative"><img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+        <div class="flex flex-column md:flex-row w-full gap-3 p-3 border-round border-1 surface-border surface-card uniform-size">
+            <div class="relative hidden lg:flex md:flex">
+                <img [src]="product.path" alt="Image" width="218" height="180" class="border-round w-full h-full">
+            </div>
+            <div class="relative flex lg:hidden md:hidden">
+                <img [src]="product.path" alt="Image" width="50" height="40" class="border-round">
             </div>
             <div class="flex flex-column w-full gap-3">
                 <div class="flex w-full justify-content-between align-items-center flex-wrap gap-3">
