@@ -128,7 +128,7 @@ type2 = [
 
 type3 = [
     {label: 'Show Me',value: 'show-me', type: 3, selectedValue: false, path: 'assets/demo/images/landing/show-me.png', description: '', pdf: 0, video: 1, scorm: 0},
-    // {label: 'Try Me',value: 'try-me', type: 3, selectedValue: false, path: ''},
+    {label: 'Try Me',value: 'try-me', type: 3, selectedValue: false, path: 'assets/demo/images/landing/try-me.png', description: '', pdf: 0, video: 0, scorm: 1},
     {label: 'Motion Graphics',value: 'motion-graphics', type: 3, selectedValue: false, path: 'assets/demo/images/landing/motion-graphics.png', description: '', pdf: 0, video: 1, scorm: 0}
 ]
 
@@ -138,8 +138,8 @@ type3 = [
   first = 0;
   iltArr1 = [
      {id: 0, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/1.TOC_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},   
-     {id: 1, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/2.Student_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
-     {id: 2, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/3.Trainer_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
+     {id: 1, name: 'Learner Material', description: this.sgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/2.Student_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
+     {id: 2, name: `Trainer Material`, description: this.tgDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/3.Trainer_Guide_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
      {id: 3, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/5.Question_Bank_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
      {id: 4, name: 'Assignments', description: this.assessDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/4.Assignments_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},
      {id: 5, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'technical', tabIndex:1, path: 'assets/docs/ilt/technical/6.Glossary_SOT.pdf', showC1: true, showC2: true, thumbnail: ''},    
@@ -148,8 +148,8 @@ type3 = [
   ];
   iltArr2 = [
     {id: 8, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/1.TOC_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-    {id: 9, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/2.Student_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
-    {id: 10, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/3.Trainer_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 9, name: 'Learner Material', description: this.sgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/2.Student_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 10, name: `Trainer Material`, description: this.tgDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/3.Trainer_Guide_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 11, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/4.Question_Bank_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 12, name: 'Frequently Asked Questions(FAQs)', description: this.faqDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/5.FAQs_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 13, name: 'Glossary', description: this.glossaryDesc, type: 'pdf', catagory: 'non-technical', tabIndex:1, path: 'assets/docs/ilt/non-technical/6.Glossary_Housekeeping.pdf', showC1: true, showC2: true, thumbnail: ''},
@@ -159,8 +159,8 @@ type3 = [
 
   iltArr3 = [
     {id: 16, name: 'Table of Contents(TOC)', description: this.tocDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/1.TOC_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-    {id: 17, name: 'Student Guide(SG) / Learner Guide(LG)', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/2.Student_Guide__AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
-    {id: 18, name: `Trainer's Guide`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/3.Trainer_Guide_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 17, name: 'Learner Material', description: this.sgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/2.Student_Guide__AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
+    {id: 18, name: `Trainer Material`, description: this.tgDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/3.Trainer_Guide_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 19, name: 'Question Bank(Assignments)', description: this.qbDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/4.Question_Bank_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 20, name: 'Mock Assessments', description: this.pqDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/5.Mock_Assessments_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 21, name: 'Tips and Tricks', description: this.ttDesc, type: 'pdf', catagory: 'gaming', tabIndex:1, path: 'assets/docs/ilt/gaming/6.Tips_Tricks_AR_VR_Futuristic_Gaming.pdf', showC1: true, showC2: true, thumbnail: ''},
@@ -177,10 +177,14 @@ type3 = [
     {id: 26, name: 'Motion Graphics', description: this.mgDesc, type: 'video', catagory: 'motion-graphics', tabIndex:3, path: 'https://www.youtube.com/embed/-w3peHe-rDs?si=vyBosFYRTQXcXBHs', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/-w3peHe-rDs/maxresdefault.jpg'},
   ]
 
+  simArr3 = [
+    {id: 25, name: 'Try Me', description: this.tryDesc, type: 'sample', catagory: 'try-me', tabIndex:3, path: 'assets/docs/simulations/try_me/story.html', showC1: true, showC2: true, thumbnail: 'assets/docs/simulations/try_me/story_content/thumbnail.jpg'},
+  ]
+
   eLearningArr = [
     {id: 36, name: 'StoryBoard(SB)', description: this.sbDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/1.Storyboard_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
     {id: 37, name: 'Audio Script(AS)', description: this.vosDesc, type: 'pdf', catagory: 'level-1', tabIndex:0, path: 'assets/docs/e-learning/level_1/2.Voice Over_Adobe_Illustrator_Applications.pdf', showC1: true, showC2: true, thumbnail: ''},
-    {id: 38, name: 'Level 1 Video', description: this.level1Desc, type: 'video', catagory: 'level-1', tabIndex:0, path: 'https://www.youtube.com/embed/i6B64dwzxOE?si=tRy8_p7ZjiJG2uR9', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/i6B64dwzxOE/maxresdefault.jpg'},
+    {id: 38, name: 'Level 1 Video', description: this.level1Desc, type: 'video', catagory: 'level-1', tabIndex:0, path: 'https://www.youtube.com/embed/qxmQ0kyX4rQ?si=rx0NV_WgGt2z6Pi5', showC1: true, showC2: true, thumbnail: 'https://img.youtube.com/vi/qxmQ0kyX4rQ/maxresdefault.jpg'},
   ];
 
   eLearningArr2 = [
@@ -282,13 +286,14 @@ type3 = [
       this.visibleVideo = true;
     } else {
       this.dialogHeader = 'Simulations';
-      this.arr = type === 'show-me' ? this.simulationArr : this.simArr2
+      this.arr = type === 'show-me' ? this.simulationArr :type === 'try-me' ? this.simArr3: this.simArr2
       this.visibleVideo = true;
     }
    
   }
 
   viewButton(link, name, type, description, catagory) {
+    console.log(link, name, type, catagory)
     this.videoLink = '?name=' + name + '&catagory=' + catagory;
     if (type === 'pdf') {
       const bt = document.createElement('a');
