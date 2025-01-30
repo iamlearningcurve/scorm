@@ -1,0 +1,1 @@
+window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%203.84.31722.0%0D%0A%0D%0A00:00:00.150%20--%3E%2000:00:04.336%0D%0AHere%20are%20some%20of%20the%20examples%20of%20the%20security%20tools%20that%20can%20help%20you%20secure%20your%20cyberspace.%0D%0A%0D%0A"}')

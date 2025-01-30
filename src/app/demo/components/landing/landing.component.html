@@ -1,292 +1,43 @@
-<div class="surface-0 flex justify-content-center" *ngIf="!pdf">
-    <div id="home" class="landing-wrapper overflow-hidden">
-        <div class="fixed w-full top-0 z-3" style="background-color: white;">
-            <div class="mt-2 py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
-                <a class="flex align-items-center" href="javascript:void(0);" (click)="switchPages('home')">
-                    <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
-                </a>
-                <a #menu pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
-                    <i class="pi pi-bars text-4xl"></i>
-                </a>
-                <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
-                    <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
-                        <li>
-                            <a (click)="switchPages('home'); menu.click()" pRipple [class]="home ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                               <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a (click)="switchPages('teams'); menu.click()" pRipple [class]="teams ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                                <span>About</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a (click)="switchPages('portfolio'); menu.click()" pRipple [class]="portfolio ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                                <span>Portfolio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a (click)="switchPages('careers'); menu.click()" pRipple [class]="careers ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                                <span>Careers</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a (click)="switchPages('services'); menu.click()" pRipple [class]="services ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                                <span>Services</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                        <button pButton pRipple label="Login" style="background-color: transparent; color: rgb(56,84,154) !important; border: 1px solid rgb(56,84,154) !important;" class="p-button-text p-button border-none font-light line-height-2 text-blue-500" (click)="navToLogin(); menu.click()"></button>
-                        <button pButton pRipple label="Contact Us" style="background-color: rgb(56,84,154) !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="switchPages('contact'); menu.click()"></button>
-                    </div>
+<div class="surface-ground px-4 py-5 md:px-6 lg:px-8">
+    <div class="grid">
+        <div class="col-12 lg:col-4 p-3">
+            <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+                <div class="flex align-items-center justify-content-between"><div>
+                    <span class="text-sm text-900 font-bold">SCORM SAMPLE</span>
+                    <p class="mt-1 mb-0 text-600 text-lg">Introduction to Cybersecurity Training</p>
                 </div>
-            </div>
-        </div>
-        <br/><br/><br/><br/><br/><br/>
-    
-        <app-home *ngIf="home" (submitOutput)="switchPages('contact')"></app-home>  
-        <app-teams *ngIf="teams"></app-teams>      
-        <app-portfolio *ngIf="portfolio"></app-portfolio>
-        <app-careers *ngIf="careers"></app-careers>
-        <app-services *ngIf="services" (submitOutput)="switchPages('contact')"></app-services>
-        <app-contact *ngIf="contact"></app-contact>
-       
-        <div class="block-content">
-            <div class="ng-star-inserted">
-                <div class="grid grid-nogutter surface-section px-4 py-4 md:px-6 lg:px-8 border-top-1 surface-border" style="background-image: url('assets/demo/images/landing/footer-bg-1.png');background-color: #eeeeee !important;">
-                    <div class="col-12 lg:col-6 lg:border-right-1 surface-border">
-                        <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class="w-20rem" style="margin-left: -50px;">
-                        <span class="text-900 block mt-4 mr-3">We love working with ambitious people. Let's build something great together now!</span>
-                        <span class="text-500 block mt-4">Copyright © {{currentYear}} Learning Curve Technologies</span>
-                    </div>
-                    <div class="col-12 md:col-6 lg:col-2 mt-4 lg:mt-0 lg:pl-4 flex flex-column">
-                        <span class="text-900 text-xl font-medium block">Company</span>
-                        <ul class="list-none p-0">
-                            <li (click)="switchPages('teams')">
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block">About</a>
-                            </li>
-                            <li (click)="visibleFaq = true">
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block">FAQ</a>
-                            </li>
-                            <li (click)="switchPages('careers')">
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block">Careers</a>
-                            </li>
-                            <li (click)="switchPages('services')">
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block">Services</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 lg:col-2 md:col-6 flex mt-4 lg:mt-0 lg:pl-4 flex-column">
-                        <span class="text-900 text-xl font-medium block">Follow Us</span>
-                        <ul class="list-none p-0">
-                           
-                            <li>
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block" href="https://m.facebook.com/p/Learning-Curve-Technologies-Bangalore-Pvt-Ltd-100063561535239/">Facebook</a>
-                            </li>
-                            <li>
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block" href="https://www.linkedin.com/company/learning-curve-technologies/about/">LinkedIn</a>
-                            </li>
-                            <li>
-                                <a tabindex="0" class="text-600 hover:text-blue-700 transition-duration-150 cursor-pointer mt-3 block" href="https://www.google.com/search?q=learning+curve+technologies&oq=learning+curve+technologies&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYOzIGCAMQRRg7MgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINDg5N2owajSoAgCwAgA&sourceid=chrome&ie=UTF-8">Google</a>
-                            </li> 
-                        </ul>
-                    </div>
-                    <div class="col-12 lg:col-2 md:col-6 flex mt-4 lg:mt-0 lg:pl-4 flex-column">
-                        <span class="text-900 text-xl block">Subscribe</span>
-                        <span class="text-500 block mt-4 line-height-3">Join our community to receieve the latest updates and special promotions.</span>
-                        <div class="p-inputgroup mt-3 mx-auto lg:mx-0" style="max-width: 30rem;">
-                            <button type="button" pbutton="" pripple="" icon="pi pi-envelope" class="p-element p-ripple text-500 surface-100 surface-border p-button p-component p-button-icon-only">
-                                <span class="p-button-icon pi pi-envelope" aria-hidden="true"></span>
-                                <span class="p-ink"></span>
-                            </button>
-                            <input type="text" pinputtext="" placeholder="Email" class="p-inputtext p-component p-element border-y-1 text-500 border-x-none surface-border">
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="py-6 lg:py-4 md:px-6 lg:px-8 flex flex-column lg:flex-row justify-content-between align-items-center" style="background-color: #2F55A0;">
-                    <ul class="list-none p-0 mb-0 flex flex-column md:flex-row flex-order-1 lg:flex-order-0 mt-4 lg:mt-0">
-                       
-                        <li class="mr-4 mt-3 lg:mt-0" (click)="visible=true">
-                            <a tabindex="0" class="cursor-pointer text-0">Privacy Policy</a>
-                        </li>
-                        <li class="mr-4 mt-3 lg:mt-0" (click)="visibleTerms = true">
-                            <a tabindex="0" class="cursor-pointer text-0">Terms of Service</a>
-                        </li>
-                        <li class="mr-4 mt-3 lg:mt-0" (click)="visibleLegal = true">
-                            <a tabindex="0" class="cursor-pointer text-0">Legal Information</a>
-                        </li>
-                    </ul>
-                    <div class="flex align-items-center flex-order-0 lg:flex-order-1">
-                        <a tabindex="0" class="cursor-pointer mr-3 lg:mt-0 block" href="https://m.facebook.com/p/Learning-Curve-Technologies-Bangalore-Pvt-Ltd-100063561535239/">
-                            <i class="pi pi-facebook surface-section p-1 text-sm border-circle text-900"></i>
-                        </a>
-                        <a tabindex="0" class="cursor-pointer mr-3 lg:mt-0 block" href="https://www.linkedin.com/company/learning-curve-technologies/about/">
-                            <i class="pi pi-linkedin surface-section p-1 text-sm border-circle text-900"></i>
-                        </a>
-                        <a tabindex="0" class="cursor-pointer lg:mt-0 block" href="https://www.google.com/search?q=learning+curve+technologies&oq=learning+curve+technologies&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYOzIGCAMQRRg7MgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINDg5N2owajSoAgCwAgA&sourceid=chrome&ie=UTF-8">
-                            <i class="pi pi-google surface-section p-1 text-sm border-circle text-900"></i>
-                        </a>
-                    </div>
+                <div>
+                    <a href="assets/docs/Introduction_to_Cybersecurity_Training/story.html" target="_blank" class="cursor-pointer text-blue-700">View Sample</a>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-12 lg:col-4 p-3">
+        <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+            <div class="flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-sm text-900 font-bold">SCORM SAMPLE</span>
+                    <p class="mt-1 mb-0 text-600 text-lg">ABC Induction Program</p>
+                </div>
+                <div>
+                    <a href="assets/docs/ABC_Induction_Program/story.html" target="_blank" class="cursor-pointer text-blue-700">View Sample</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-12 lg:col-4 p-3">
+        <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+            <div class="flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-3xl text-900 font-bold">15K</span>
+                    <p class="mt-1 mb-0 text-600 text-xl">Daily Revenue</p>
+                </div>
+                <div>
+                    <a href="assets/docs/ABC_Induction_Program/story.html" target="_blank">View Sample</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </div>
-<p-dialog header="Frequently Asked Questions" [(visible)]="visibleFaq" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleFaq = false;">
-    
-    <div class="surface-section px-4 py-6 md:px-6">
-        <div class="grid">
-            <div class="col-12 text-900 md:col-6 font-medium text-lg line-height-3">How much do you charge for your services?</div>
-            <div class="col-12 md:col-6 text-700 line-height-3">Contact us to know what we charge, but before that, do glance the section on Our Customer Engagement Model to get an overview.</div>
-        </div>
-        <hr class="my-3 mx-0 border-top-1 border-none surface-border">
-        <div class="grid">
-            <div class="col-12 text-900 md:col-6 font-medium text-lg line-height-3">How long does it take to complete a project?</div>
-            <div class="col-12 md:col-6 text-700 line-height-3">It depends on the complexity of the project, number of revisions, and client response time. We are committed to work on the project diligently and complete it as quickly as possible!</div>
-        </div>
-        <hr class="my-3 mx-0 border-top-1 border-none surface-border">
-        <div class="grid">
-            <div class="col-12 text-900 md:col-6 font-medium text-lg line-height-3">How do you ensure the quality of the project?</div>
-            <div class="col-12 md:col-6 text-700 line-height-3">From nailing the brief to exceeding expectations, quality is our secret sauce. We bake it into every project stage, from clarifying goals in the briefing to user testing in design. Think automated deployment checks, collaborative client reviews, and comprehensive documentation—all to ensure a flawless final product that delights you. We don't just aim for quality, we guarantee it.</div>
-        </div>
-        
-    </div>
-</p-dialog>
-
-
-<p-dialog header="Terms of Service" [(visible)]="visibleTerms" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleTerms = false">
-    <p>
-        Learning Curve Technologies Terms of Service</p>
-
-<p>Effective Date: Feb 12, 2024</p>
-
-<h5>1. Acceptance of Terms</h5>
-
-<p>Welcome to Learning Curve Technologies! By accessing or using our services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.</p>
-
-<h5>2. Description of Services</h5>
-
-<p>Learning Curve Technologies provides content creation, online learning courses, graphic development, customized hosting and related services (the "Services"). These Services may include, but are not limited to, course materials, interactive forums, and assessments.</p>
-<h5>3. User Conduct</h5>
-
-<p>You agree to use the Services only for lawful purposes and in a manner consistent with these Terms. You may not:</p>
-
-<p>Violate any laws, regulations, or third-party rights.
-Use the Services to transmit spam, malware, or other harmful content.
-Interfere with the operation of the Services or disrupt the experiences of other users.
-Engage in any activity that could harm Learning Curve Technologies or its users.</p>
-<h5>4. User Accounts</h5>
-
-<p>To access certain features of the Services, you may need to create a user account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
-
-<h5>5. Intellectual Property</h5>
-
-<p>All content and materials provided through the Services, including but not limited to text, graphics, logos, and videos, are the property of Learning Curve Technologies or its licensors and are protected by intellectual property laws. You may not use, reproduce, or distribute any of this content without prior written permission.</p>
-
-<h5>6. Privacy</h5>
-
-<p>Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and disclose your personal information in connection with the Services.</p>
-
-<h5>7. Third-Party Links</h5>
-
-<p>The Services may contain links to third-party websites or resources. Learning Curve Technologies is not responsible for the availability or accuracy of such external sites or resources and does not endorse any content, products, or services offered through them.</p>
-
-<h5>8. Termination</h5>
-
-<p>Learning Curve Technologies reserves the right to suspend or terminate your access to the Services at any time for any reason, without prior notice or liability.</p>
-
-<h5>9. Disclaimer of Warranties</h5>
-
-<p>The Services are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. Learning Curve Technologies disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-
-<h5>10. Limitation of Liability</h5>
-
-<p>In no event shall Learning Curve Technologies be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Services.</p>
-
-<h5>11. Governing Law</h5>
-
-<p>These Terms shall be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law principles.</p>
-
-<h5>12. Changes to Terms</h5>
-
-<p>Learning Curve Technologies reserves the right to modify or replace these Terms at any time. Any changes will be effective immediately upon posting on this page.</p>
-
-<h5>13. Contact Us</h5>
-
-<p>If you have any questions or concerns about these Terms, please contact us at <a class="text-blue-600 underline" href="mailto:info@learningcurvetechnologies.com">{{'info@learningcurvetechnologies.com'}}</a>.
-
-By using the Services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
-    </p>
-</p-dialog>
-
-<p-dialog  header="Legal Information" [(visible)]="visibleLegal" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleLegal = false">
-
-<h5>1. Ownership and Operation</h5>
-
-<p>This website/application ("Site") is owned and operated by Learning Curve Technologies ("Learning Curve," "we," "us," or "our"). By accessing or using this Site, you agree to be bound by the terms and conditions set forth herein.</p>
-
-<h5>2. Intellectual Property</h5>
-
-<p>All content, logos, trademarks, service marks, and other intellectual property displayed on this Site are the property of Learning Curve Technologies or their respective owners. You may not use, reproduce, distribute, or modify any content on this Site without prior written permission from the respective rights holders.</p>
-
-<h5>3. Disclaimers</h5>
-
-<p>This Site is provided "as is" and "as available" without warranties of any kind, either express or implied. Learning Curve Technologies disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
-
-<h5>4. Limitation of Liability</h5>
-
-<p>In no event shall Learning Curve Technologies be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of this Site, including but not limited to lost profits, lost data, or business interruption.</p>
-
-<h5>5. Links to Third-Party Sites</h5>
-
-<p>This Site may contain links to third-party websites or resources. Learning Curve Technologies is not responsible for the availability, accuracy, or content of such external sites or resources and does not endorse any content, products, or services offered through them.</p>
-
-<h5>6. Governing Law</h5>
-
-<p>These terms and conditions shall be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law principles.</p>
-
-<h5>7. Changes to Terms</h5>
-
-<p>Learning Curve Technologies reserves the right to modify or replace these terms and conditions at any time. Any changes will be effective immediately upon posting on this page.</p>
-
-<h5>8. Contact Us</h5>
-
-<p>If you have any questions or concerns about these terms and conditions, please contact us at <a class="text-blue-600 underline" href="mailto:info@learningcurvetechnologies.com">{{'info@learningcurvetechnologies.com'}}</a></p>
-
-
-</p-dialog>
-
-
-<p-dialog header="Privacy Policy" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visible = false">
-    <p>This Privacy Policy governs the manner in which Learning Curve Technologies collects, uses, maintains, and discloses information collected from users (each, a "User") of the Learning Curve Technologies website ("Site"). This privacy policy applies to the Site and all products and services offered by Learning Curve Technologies.</p>
-        
-    <h5>Non-personal identification information</h5>
-
-    <p>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer, and technical information about Users' means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.</p>
-    <h5>Learning Curve Technologies may collect and use Users' personal information for the following purposes:</h5>
-
-    <p>To improve customer service: Information you provide helps us respond to your customer service requests and support needs more efficiently.</p>
-    <p>To personalize user experience: We may use information in the aggregate to understand how our Users as a group use the services and resources provided on our Site.</p>
-    <p>To improve our Site: We may use feedback you provide to improve our products and services.</p>
-    <p>To send periodic emails: We may use the email address to send User information and updates pertaining to their order. It may also be used to respond to their inquiries, questions, and/or other requests. If User decides to opt-in to our mailing list, they will receive emails that may include company news, updates, related product or service information, etc. If at any time the User would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email or User may contact us via our Site.</p>
-    
-    <h5>How we protect your information</h5>
-
-    <p>We adopt appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, username, password, transaction information, and data stored on our Site.</p>
-
-    <h5>Sharing your personal information</h5>
-
-    <p>We do not sell, trade, or rent Users' personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers for the purposes outlined above.
-    </p>
-    <h5>Changes to this privacy policy</h5>
-
-    <p>Learning Curve Technologies has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
-    <h5>Samples in Portfolio page</h5>
-    <p>Samples here showcase our capabilities; however, the IP rights remain with our clients. The samples shared here are extracts of client deliveries.
-    </p>
-</p-dialog>
 
 <app-pdf-viewer *ngIf="pdf"></app-pdf-viewer>
